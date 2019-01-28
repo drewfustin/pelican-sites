@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% if page.banner %}
+    {% block banner_color %}
+        style="background-color:{{ page.banner }};"
+    {% endblock %}
+{% endif %}
+
+{% block title %}{{ page.title }}{% endblock %}
+
+{% block content %}
+<article>
+    <header>{{ page.title }}</header>
+    {{ page.content }}
+</article>
+{% endblock content %}

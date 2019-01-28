@@ -1,0 +1,64 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v2.json",
+    "data": {
+        "url": "{data_file}"
+    },
+    "mark": "point",
+    "config": {
+        "view": {
+            "height": 300,
+            "width": 400
+        }
+    },
+    "encoding": {
+        "color": {
+            "type": "nominal",
+            "field": "Origin"
+        },
+        "tooltip": [
+            {
+                "type": "nominal",
+                "field": "Name"
+            },
+            {
+                "type": "nominal",
+                "field": "Origin"
+            },
+            {
+                "type": "quantitative",
+                "field": "Horsepower"
+            },
+            {
+                "type": "quantitative",
+                "field": "Miles_per_Gallon"
+            }
+        ],
+        "x": {
+            "type": "quantitative",
+            "field": "Horsepower"
+        },
+        "y": {
+            "type": "quantitative",
+            "field": "Miles_per_Gallon"
+        }
+    },
+    "selection": {
+        "selector016": {
+            "type": "interval",
+            "bind": "scales",
+            "encodings": [
+                "x",
+                "y"
+            ],
+            "on": "[mousedown, window:mouseup] > window:mousemove!",
+            "translate": "[mousedown, window:mouseup] > window:mousemove!",
+            "zoom": "wheel!",
+            "mark": {
+                "fill": "#333",
+                "fillOpacity": 0.125,
+                "stroke": "white"
+            },
+            "resolve": "global"
+        }
+    }
+}

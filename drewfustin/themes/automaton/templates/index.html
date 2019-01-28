@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{% if articles %}
+    {% for article in articles %}
+        <div class="article-list">
+            <a href="{{ SITEURL }}/{{ article.url }}">
+                {% if article.featured_image %}
+                    <img src="{{ article.featured_image }}">
+                {% else %}
+                    <img src="{{ SITEURL }}/{{ DEFAULT_IMAGE }}">
+                {% endif %}
+            </a>
+
+            <header><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></header>
+            <time datetime="{{ article.date.isoformat() }}">{{ article.locale_date }}</time>
+            {{ article.summary }}
+        </div>
+    {% endfor %}
+{% else %}
+    No posts found.
+{% endif %}
+{% endblock content %}

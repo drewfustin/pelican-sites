@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="{{ DEFAULT_LANG }}">
+<head>
+    <title>{% block title %}{{ SITENAME }}{%endblock%}</title>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    {% if AUTHOR %}
+        <meta name="author" content="{{ AUTHOR }}" />
+        <meta name="copyright" content="{{ AUTHOR }}" />
+    {% endif %}
+
+    {% if SITE_DESCRIPTION %}
+        <meta name="description" content="{{ SITE_DESCRIPTION|e }}" />
+    {% endif %}
+
+    {% if KEYWORDS %}
+        <meta name="keywords" content="{{ KEYWORDS|join(',') }}">
+    {% endif %}
+
+    <link rel="stylesheet"
+          href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
+          integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
+          crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/theme/css/automaton.css" />
+
+    {% block extra_css %}{% endblock %}
+
+    {% block js_loads %}{% endblock %}
+</head>
+
+<body>
+
+    <header class="banner"
+        {% block banner_color %}
+            {% if BANNER_COLOR %}
+                style="background-color:{{ BANNER_COLOR }};"
+            {% endif %}
+        {% endblock %}>
+    {% include 'header.html' %}
+    </header>
+
+    <div class="content">
+        {% block content %}
+        {% endblock %}
+    </div>
+
+    {% if AUTHOR %}
+        {% include 'footer.html' %}
+    {% endif %}
+
+    {% block js_code %}{% endblock %}
+
+</body>
+</html>

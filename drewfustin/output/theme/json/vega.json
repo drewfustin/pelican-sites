@@ -1,0 +1,20 @@
+{
+    "axis": {
+        "labelFont": "Open Sans",
+        "labelFontSize": 12,
+        "titleFont": "Open Sans",
+        "titleFontSize": 16,
+        "titleFontWeight": 300
+    },
+    "legend": {
+        "labelFont": "Open Sans",
+        "labelFontSize": 12,
+        "titleFont": "Open Sans",
+        "titleFontSize": 12,
+        "titleFontWeight": 600
+    },
+    "view": {
+        "height": 300,
+        "width": 400
+    }
+}

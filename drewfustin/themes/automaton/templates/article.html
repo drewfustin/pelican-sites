@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% if article.banner %}
+    {% block banner_color %}
+    style="background-color:{{ article.banner }};"
+    {% endblock %}
+{% endif %}
+
+{% block title %}{{ article.title }}{% endblock %}
+
+{% if article.imports and ('vega' in article.imports.split(',')) %}
+    {% block js_loads %}
+    <script src="https://cdn.jsdelivr.net/npm/vega@3"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@2"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@3"></script>
+    {% endblock %}
+{% endif %}
+
+{% block content %}
+<article>
+    <header>{{ article.title }}</header>
+    <time datetime="{{ article.date.isoformat() }}">{{ article.locale_date }}</time>
+    {{ article.content }}
+</article>
+{% endblock content %}

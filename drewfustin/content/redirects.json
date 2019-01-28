@@ -1,0 +1,18 @@
+[
+    {
+        "slug": "resume",
+        "url": "static/pdf/resume__20190122.pdf"
+    },
+    {
+        "slug": "thesis",
+        "url": "static/pdf/fustin_thesis.pdf"
+    },
+    {
+        "slug": "judges",
+        "url": "static/pdf/joshua_judges.pdf"
+    },
+    {
+        "slug": "august",
+        "url": "static/pdf/august__lvl-1.pdf"
+    }
+]

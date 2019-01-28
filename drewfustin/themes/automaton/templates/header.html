@@ -1,0 +1,17 @@
+<div class="outer">
+    <div class="headshot">
+        <a href="{{ HEADSHOT_LINK }}"><img src="{{ HEADSHOT_URL }}"></img></a>
+    </div>
+    <div class="inner">
+        <div class="links">
+            {% for url, icon in BANNER_LINKS %}
+                <a href="{{ url|e }}"><i class="{{ icon|e }}"></i></a>
+            {% endfor %}
+        </div>
+        <div class="search">
+            <form action="{{ SITEURL }}/search.html" onsubmit="return validateForm(this.elements['q'].value);">
+                <input type="text" class="search-query" placeholder="Search" name="q" id="tipue_search_input" required />
+            </form>
+        </div>
+    </div>
+</div>
