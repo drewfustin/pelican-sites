@@ -1,0 +1,505 @@
+Title: The Physics of Deflategate
+Date: 2015-05-11
+Slug: deflategate
+URL: deflategate
+Image: http://drewfustin.com/images/deflategate/og.png
+
+Fine. You win, NFL.
+
+After becoming an obsessive fan in 1993 when the Patriots drafted Drew Bledsoe, because we had the same name (which, to my 11 year old brain, made a ton of sense), I've followed your league closer than any reasonable person would. I've lived through the heartache of Bill Parcells leaving (and absconding to the Jets with Curtis Martin) to the pains experienced after Drew Bledsoe's tragic (and fateful) injury to living through Pete Carroll. I've experienced the highs of an inexplicable Super Bowl run in Brady's first year as a starter and a nearly perfect season, and the heartache of 18-1. I'm even more obsessed with the NFL Draft than basically anyone I know.
+
+But, you win. I'm out. I'm done with the NFL. But not without one last football-related rant.
+
+After the [overblown story that was Spygate](http://bleacherreport.com/articles/199345-the-truth-about-spygate-punishing-success-and-promoting-parity), I now have to endure Deflategate -- a scandal so absurd that you don't even try to hide that it's [only a scandal if the Patriots do it](http://espn.go.com/blog/minnesota-vikings/post/_/id/11218/nfl-aware-of-game-ball-incident-during-panthers-vikings). Why is it absurd, you ask? Come on, everyone knows it's absurd. So, just allow me to focus only on the absurdity that I have an expertise in -- the physics.
+
+I hate people who credential drop. I really do. But, in this case it's justified. I am not some idiot NFL fan who blindly believes anything my team tells me. I have a Ph.D. in Physics from the [number 12 institution _in the world_](http://www.topuniversities.com/university-rankings/university-subject-rankings/2014/physics#sorting=rank+region=+country=+faculty=+stars=false+search=). My [dissertation](/thesis) even dealt heavily with all things pressure -- it specifically mentions psi 143 times.
+
+And my expertise (not my fandom) claims that this assertion that the [Wells Report](https://nfllabor.files.wordpress.com/2015/05/investigative-and-expert-reports-re-footballs-used-during-afc-championsh.pdf) makes is the height of absurdity:
+
+> According to our scientific consultants, however, the reduction in pressure of the Patriots game balls cannot be explained completely by basic scientific principles, such as the Ideal Gas Law, based on the circumstances and conditions likely to have been present on the day of the AFC Championship Game.
+
+(Your scientific consultants, by the way, [think secondhand smoke does not cause cancer](http://articles.latimes.com/2010/feb/18/business/la-fi-toyota-exponent18-2010feb18). And what happened to [partnering with Columbia University's physics department](http://espn.go.com/nfl/story/_/id/12241615/nfl-investigator-seeks-contact-columbia-university-physics-department-deflategate-probe)? Did they not agree to your assumptions?)
+
+It's absurd because they ultimately make the claim that the reduction in pressure of the Patriots game balls is beyond the reach of the Ideal Gas Law because the reduction had to be the bigger of the two available answers despite the fact that it probably wasn't. That sentence sounds silly and circular, and that's because it is. But, it's what the report says.
+
+You see, as we all know by now, there were two pressure gauges of the same precision but with different accuracy available to the NFL officials during halftime measurements -- the so-called "Logo Gauge" and the "Non-Logo Gauge." The Logo Gauge tended to give results that were about 0.35 psig<sup><small>1</small></sup> higher than the Non-Logo Gauge. To compare the halftime pressure readings to the pre-game pressure readings, we need to know which gauge Walt Anderson used for the pre-game pressure readings. On page 52 of this infernal report, it says:
+
+> Although Anderson's best recollection is that he used the Logo Gauge, he said that it is certainly possible that he used the Non-Logo Gauge.
+
+They then go on assuming he used the Non-Logo Gauge. Why? Here, again, is the infernal report:
+
+> Exponent's experimental results were aligned with the measurements recorded at halftime, which indicated a consistent gauge-to-gauge differential of 0.3-0.45 psi. Exponent relied upon this information, as well as the fact that during the testing the Non-Logo Gauge never produced a reading higher than the Logo Gauge, to conclude that Walt Anderson most likely used the Non-Logo Gauge to inspect the game balls prior to the game.
+
+In other words, they think Anderson used the Non-Logo Gauge (despite the fact that he actually claims otherwise) _only because the Non-Logo Gauge produced lower pressure readings_. That the conclusion of the report supports some nefarious deflation plot shouldn't be surprising when you pick the result that best supports this belief simply because it best supports this belief.
+
+But, what if, _what if?_, this all started because of NFL officials' gross misunderstanding of thermodynamics? What if, by the time cooler heads with a high school science education had the time to interpret the halftime pressure readings, there had already been several leaks from the NFL office to the media about the Patriots involvement in a cheating scandal? What if, just to keep themselves from looking bad, the NFL had to hire a scientific consulting firm that admits to producing results that the client wants to hear? What if nothing actually happened to the pressure levels of the Patriots footballs during the AFC Championship Game, but despite this fact, the most draconian punishment in the history of the NFL was handed down nonetheless? If this were true, even a Colts fan would have to admit that's pretty messed up.
+
+So now, let me get to what the data _actually_ says about the Patriots game balls and make the claim that __without even having to appeal to any other wizardy than the fact that it was cold outside and Walt Anderson used the Logo Gauge pre-game (as he thinks he did), the results of the Wells Report support the fact that it is more probable than not that the Patriots game balls weren't even tampered with in the AFC Championship Game.__
+
+### Scientific Results
+
+Anderson believes, but did not record, that the Patriots game balls measured 12.5 psig prior to the game. He also believes, but did not record, that he used the Logo Gauge to make these measurements. The former belief is held as gospel truth by the Wells Report. The latter is discarded in favor of the more conspiratorial answer.
+
+It would also have been super useful if he'd recorded the temperature of the room pre-game when the measurements were made. Saying that the footballs measured 12.5 psig pre-game isn't exactly useful unless I know the temperature at which this measurement was made. I'm going to suppose 74&deg;F for room temperature. Exponent claims all sorts of temperatures, most of which seem reasonable, but they are all guesses because it was not measured.
+
+So, what were the halftime measurements that were compared to the pre-game 12.5 psig at 74&deg;F? Well, it depends on which gauge you ask.
+
+<center>
+<table style="width:50%">
+    <tr>
+        <th bgcolor="#ccc" align="left">Patriots Ball Number</th>
+        <th bgcolor="#ccc" align="left">Logo Gauge [psig]</th>
+        <th bgcolor="#ccc" align="left">Non-Logo Gauge [psig]</th>
+    </tr>
+    <tr>
+        <td bgcolor="#fff">1</td>
+        <td bgcolor="#fff">11.80</td>
+        <td bgcolor="#fff">11.50</td>
+    </tr>
+    <tr>
+        <td bgcolor="#eee">2</td>
+        <td bgcolor="#eee">11.20</td>
+        <td bgcolor="#eee">10.85</td>
+    </tr>
+    <tr>
+        <td bgcolor="#fff">3</td>
+        <td bgcolor="#fff">11.50</td>
+        <td bgcolor="#fff">11.15</td>
+    </tr>
+    <tr>
+        <td bgcolor="#eee">4</td>
+        <td bgcolor="#eee">11.00</td>
+        <td bgcolor="#eee">10.70</td>
+    </tr>
+    <tr>
+        <td bgcolor="#fff">5</td>
+        <td bgcolor="#fff">11.45</td>
+        <td bgcolor="#fff">11.10</td>
+    </tr>
+    <tr>
+        <td bgcolor="#eee">6</td>
+        <td bgcolor="#eee">11.95</td>
+        <td bgcolor="#eee">11.60</td>
+    </tr>
+    <tr>
+        <td bgcolor="#fff">7</td>
+        <td bgcolor="#fff">12.30</td>
+        <td bgcolor="#fff">11.85</td>
+    </tr>
+    <tr>
+        <td bgcolor="#eee">8</td>
+        <td bgcolor="#eee">11.55</td>
+        <td bgcolor="#eee">11.10</td>
+    </tr>
+    <tr>
+        <td bgcolor="#fff">9</td>
+        <td bgcolor="#fff">11.35</td>
+        <td bgcolor="#fff">10.95</td>
+    </tr>
+    <tr>
+        <td bgcolor="#eee">10</td>
+        <td bgcolor="#eee">10.90</td>
+        <td bgcolor="#eee">10.50</td>
+    </tr>
+    <tr>
+        <td bgcolor="#fff">11</td>
+        <td bgcolor="#fff">11.35</td>
+        <td bgcolor="#fff">10.90</td>
+    </tr>
+</table>
+</center>
+<center><small>Raw halftime pressure readings provided by the Wells Report.</small></center>
+
+If the Logo Gauge was used pre-game, then the Logo Gauge results from halftime should be used as the comparable results. Since the Non-Logo Gauge measures consistently 0.38 psig lower than the Logo Gauge, we can still use the Non-Logo Gauge results to compare to a 12.5 psig pre-game reading by the Logo Gauge _provided that we correct them higher by 0.38 psig_. To use halftime results from a pressure gauge not used for the pre-game results is as valid as me using the tire gauge in my glove compartment in the same experiment. Why is it even a valid solution that is considered?
+
+<center>
+<table style="width:50%">
+    <tr>
+        <th bgcolor="#ccc" align="left">Patriots Ball Number</th>
+        <th bgcolor="#ccc" align="left">Logo Gauge [psig]</th>
+        <th bgcolor="#ccc" align="left">Non-Logo Gauge (corrected) [psig]</th>
+    </tr>
+    <tr>
+        <td bgcolor="#fff">1</td>
+        <td bgcolor="#fff">11.80</td>
+        <td bgcolor="#fff">11.88</td>
+    </tr>
+    <tr>
+        <td bgcolor="#eee">2</td>
+        <td bgcolor="#eee">11.20</td>
+        <td bgcolor="#eee">11.23</td>
+    </tr>
+    <tr>
+        <td bgcolor="#fff">3</td>
+        <td bgcolor="#fff">11.50</td>
+        <td bgcolor="#fff">11.53</td>
+    </tr>
+    <tr>
+        <td bgcolor="#eee">4</td>
+        <td bgcolor="#eee">11.00</td>
+        <td bgcolor="#eee">11.08</td>
+    </tr>
+    <tr>
+        <td bgcolor="#fff">5</td>
+        <td bgcolor="#fff">11.45</td>
+        <td bgcolor="#fff">11.48</td>
+    </tr>
+    <tr>
+        <td bgcolor="#eee">6</td>
+        <td bgcolor="#eee">11.95</td>
+        <td bgcolor="#eee">11.98</td>
+    </tr>
+    <tr>
+        <td bgcolor="#fff">7</td>
+        <td bgcolor="#fff">12.30</td>
+        <td bgcolor="#fff">12.23</td>
+    </tr>
+    <tr>
+        <td bgcolor="#eee">8</td>
+        <td bgcolor="#eee">11.55</td>
+        <td bgcolor="#eee">11.48</td>
+    </tr>
+    <tr>
+        <td bgcolor="#fff">9</td>
+        <td bgcolor="#fff">11.35</td>
+        <td bgcolor="#fff">11.33</td>
+    </tr>
+    <tr>
+        <td bgcolor="#eee">10</td>
+        <td bgcolor="#eee">10.90</td>
+        <td bgcolor="#eee">10.88</td>
+    </tr>
+    <tr>
+        <td bgcolor="#fff">11</td>
+        <td bgcolor="#fff">11.35</td>
+        <td bgcolor="#fff">11.28</td>
+    </tr>
+</table>
+</center>
+<center><small>Corrected halftime pressure readings, assuming the Logo Gauge was used for pre-game measurements.</small></center>
+
+Due to the cooling of the air inside the footballs which occurred throughout the first half (I'll use 48&deg;F for the halftime ball air temperature, which is what Exponent used), we can use the Ideal Gas Law
+
+$$PV = nRT$$
+
+to determine how the pressure of the footballs changed. In this equation, $P$ is pressure in psia (add 14.7 psig to the gauge pressure reading), $T$ is temperature in Kelvin (where Kelvin and Fahrenheit are related by $T_K = \frac{5}{9} (T_F + 459.67)$), $V$ is the volume of the football, $n$ is the amount of air in the football, and $R$ is a universal constant. In the world where $V$, $n$, and $R$ are constant (the football doesn't expand and air doesn't leak out, by nefarious means or otherwise), comparing the pre-game readings to the halftime readings is as simple as solving
+
+$$\frac{P_\mathrm{pregame}}{T_\mathrm{pregame}} = \frac{P_\mathrm{halftime}}{T_\mathrm{halftime}}$$
+
+Using this equation with $T_\mathrm{pregame}$ = 74&deg;F and $T_\mathrm{halftime}$ = 48&deg;F, the halftime measurements of each football can be used to predict what the pre-game pressure value must have been. Before the data was released (and making assumptions about the initial pressure of the Colts balls and the temperatures, which is why the lines are labeled with non-Wells Report numbers -- but you get the idea), I made the following chart which shows just exactly how the pressure of a football should vary with temperature.
+
+<center>![Football Pressure Changes with Temperature](http://drewfustin.com/images/deflategate/T_P_deviations.png)</center>
+<center><small>The pressure response of footballs of various pressures measured at specific temperatures, according to the Ideal Gas Law.</small></center>
+
+But, now that I can use the actual values given in the Wells Report, I got even more precise with these numbers. The calculations for what follows can be found [in this spreadsheet](http://drewfustin.com/extra/deflategate/deflategate.xlsx).
+
+<center>
+<table style="width:60%">
+    <tr>
+        <th bgcolor="#ccc" align="left">Patriots Ball Number</th>
+        <th bgcolor="#ccc" align="left">Average Halftime Reading (w/ Non-Logo Gauge corrected) [psig]</th>
+        <th bgcolor="#ccc" align="left">Projected Pre-Game Reading on Logo Gauge [psig]</th>
+    </tr>
+    <tr>
+        <td bgcolor="#fff">1</td>
+        <td bgcolor="#fff">11.84</td>
+        <td bgcolor="#fff">13.20</td>
+    </tr>
+    <tr>
+        <td bgcolor="#eee">2</td>
+        <td bgcolor="#eee">11.22</td>
+        <td bgcolor="#eee">12.54</td>
+    </tr>
+    <tr>
+        <td bgcolor="#fff">3</td>
+        <td bgcolor="#fff">11.52</td>
+        <td bgcolor="#fff">12.86</td>
+    </tr>
+    <tr>
+        <td bgcolor="#eee">4</td>
+        <td bgcolor="#eee">11.04</td>
+        <td bgcolor="#eee">12.36</td>
+    </tr>
+    <tr>
+        <td bgcolor="#fff">5</td>
+        <td bgcolor="#fff">11.47</td>
+        <td bgcolor="#fff">12.81</td>
+    </tr>
+    <tr>
+        <td bgcolor="#eee">6</td>
+        <td bgcolor="#eee">11.97</td>
+        <td bgcolor="#eee">13.33</td>
+    </tr>
+    <tr>
+        <td bgcolor="#fff">7</td>
+        <td bgcolor="#fff">12.27</td>
+        <td bgcolor="#fff">13.65</td>
+    </tr>
+    <tr>
+        <td bgcolor="#eee">8</td>
+        <td bgcolor="#eee">11.52</td>
+        <td bgcolor="#eee">12.86</td>
+    </tr>
+    <tr>
+        <td bgcolor="#fff">9</td>
+        <td bgcolor="#fff">11.34</td>
+        <td bgcolor="#fff">12.67</td>
+    </tr>
+    <tr>
+        <td bgcolor="#eee">10</td>
+        <td bgcolor="#eee">10.89</td>
+        <td bgcolor="#eee">12.20</td>
+    </tr>
+    <tr>
+        <td bgcolor="#fff">11</td>
+        <td bgcolor="#fff">11.32</td>
+        <td bgcolor="#fff">12.65</td>
+    </tr>
+    <tr>
+        <th bgcolor="#eee" align="left">Average</th>
+        <th bgcolor="#eee" align="left">11.49</th>
+        <th bgcolor="#eee" align="left">12.83</th>
+    </tr>
+</table>
+</center>
+<center><small>Projected pre-game pressure readings on the Logo Gauge, assuming the Logo Gauge was used for pre-game measurements. Half-time ball temperature 48&deg;F. Pre-game ball temperature 74&deg;F.</small></center>
+
+Why, that data almost suggests that nothing nefarious happened at all! The average halftime measurement was 11.49 psig in Logo Gauge units. This corresponds to a pre-game projected measurement on the Logo Gauge of 12.83 psig. I'm pretty sure that's greater than 12.5 psig, which is the arbitrary limit the NFL set. In fact, only 2 balls were projected to be lower than 12.5 psig (balls 4 and 10), which can be explained in a bazillion ways other than cheating (and according to [Occam's razor](http://en.wikipedia.org/wiki/Occam%27s_razor), those other solutions are probably more realistic).
+
+But, in this scenario (with constant halftime temperature of 48&deg;F), the Colts balls would have initially been 14.13 psig. That doesn't seem right.
+
+So, to be a bit more fair, a simple solution to the [heat equation](http://en.wikipedia.org/wiki/Heat_equation) predicts that the temperature of the air within the footballs begins to move towards equilibrium with the indoor temperature in an exponential fashion, eventually asymptotically approaching room temperature. If Exponent is to be believed (and why not!), this process takes place in a period of approximately 15 minutes (according to Figure 14 on page 31 of the Exponent section).
+
+<center>![Halftime Temperature/Pressure Ramp over Time](http://drewfustin.com/images/deflategate/halftime_T_rise.png)</center>
+<center><small>image by Exponent from the Wells Report</small></center>
+
+Keeping in mind that a total of 13.5 minutes was available to measure each of the 11 Patriots balls and 4 Colts balls and to refill the Patriots balls, I fit each measurement along this curve over time (so each subsequent football is a bit warmer than the last). The Patriots footballs took about 5 minutes to be measured, so they're about 58&deg;F by the end of measurement. This was an inexact science, but probably pretty darn good, according to the plot above.
+
+<center>
+<table style="width:60%">
+    <tr>
+        <th bgcolor="#ccc" align="left">Patriots Ball Number</th>
+        <th bgcolor="#ccc" align="left">Average Halftime Reading (w/ Non-Logo Gauge corrected) [psig]</th>
+        <th bgcolor="#ccc" align="left">Projected Pre-Game Reading on Logo Gauge [psig]</th>
+    </tr>
+    <tr>
+        <td bgcolor="#fff">1</td>
+        <td bgcolor="#fff">11.84</td>
+        <td bgcolor="#fff">13.20</td>
+    </tr>
+    <tr>
+        <td bgcolor="#eee">2</td>
+        <td bgcolor="#eee">11.22</td>
+        <td bgcolor="#eee">12.49</td>
+    </tr>
+    <tr>
+        <td bgcolor="#fff">3</td>
+        <td bgcolor="#fff">11.52</td>
+        <td bgcolor="#fff">12.75</td>
+    </tr>
+    <tr>
+        <td bgcolor="#eee">4</td>
+        <td bgcolor="#eee">11.04</td>
+        <td bgcolor="#eee">12.20</td>
+    </tr>
+    <tr>
+        <td bgcolor="#fff">5</td>
+        <td bgcolor="#fff">11.47</td>
+        <td bgcolor="#fff">12.59</td>
+    </tr>
+    <tr>
+        <td bgcolor="#eee">6</td>
+        <td bgcolor="#eee">11.97</td>
+        <td bgcolor="#eee">13.06</td>
+    </tr>
+    <tr>
+        <td bgcolor="#fff">7</td>
+        <td bgcolor="#fff">12.27</td>
+        <td bgcolor="#fff">13.31</td>
+    </tr>
+    <tr>
+        <td bgcolor="#eee">8</td>
+        <td bgcolor="#eee">11.52</td>
+        <td bgcolor="#eee">12.48</td>
+    </tr>
+    <tr>
+        <td bgcolor="#fff">9</td>
+        <td bgcolor="#fff">11.34</td>
+        <td bgcolor="#fff">12.25</td>
+    </tr>
+    <tr>
+        <td bgcolor="#eee">10</td>
+        <td bgcolor="#eee">10.89</td>
+        <td bgcolor="#eee">11.73</td>
+    </tr>
+    <tr>
+        <td bgcolor="#fff">11</td>
+        <td bgcolor="#fff">11.32</td>
+        <td bgcolor="#fff">12.12</td>
+    </tr>
+    <tr>
+        <th bgcolor="#eee" align="left">Average</th>
+        <th bgcolor="#eee" align="left">11.49</th>
+        <th bgcolor="#eee" align="left">12.56</th>
+    </tr>
+</table>
+</center>
+<center><small>Projected pre-game pressure readings on the Logo Gauge, assuming the Logo Gauge was used for pre-game measurements. Half-time ball temperature 48&deg;F and heating towards room temperature, ending at 58&deg;F. Pre-game ball temperature 74&deg;F.</small></center>
+
+In this case, four balls were under 12.5 psig (balls 4, 9, 10, and 11), but the average was still 12.56 psig, which is still greater than 12.5 psig. Given the number of variables that could be changing, this is completely reasonable to any fair reader of the report.
+
+In this scenario, there are two possibilities for when the Colts balls are measured during halftime (I discuss this at the bottom in the Various Notes of Note section) -- either right after the Patriots balls were or at the end of halftime, after refilling the Patriots balls. If they were measured right after the Patriots balls, the Colts balls were on average 13.43 psig originally (conflicting with what Anderson said they were). But, _if they were measured at the end of halftime_ (when their temperature was nearly 70&deg;F), they would have been 13.01 psig. This is exactly what Anderson said they were.
+
+__So, a scenario where the Logo Gauge was used by Walt Anderson pre-game, the Patriots halftime measurements were recorded at the beginning of halftime, and the Colts were measured at the end of halftime yields an average initial pressure of 12.56 psig for the Patriots balls and 13.01 psig for the Colts ball. Both are what Anderson measured pregame _without tampering_ having to be invoked.__
+
+<hr />
+
+<small>And now, a quick aside to discuss the halftime timeline. I've received _numerous_ emails asking me to include something about the post-game pressure readings, something Exponent conveniently decided was not valid for the narrative. The people have spoken, and they are right -- there is much to be gained from doing so.</small>
+
+<small>After the game was over, a set of four Patriots balls and four Colts balls were randomly chosen and pressure sampled. Using these readings and the in-no-way-tampered-with actual pressures of those footballs (all of which were nominally set at 13.0 psig, either by the Colts initially or by the officials at halftime, in the case of the Patriots footballs), we can infer something about the order of events at halftime. Assuming all the post-game footballs had reached an equilibrium temperature (let's say 74&deg;F, it turns out not to matter so much for the argument) and that the footballs were representative of the entire sample, what temperature did the a) halftime Colts balls' temperature have to be in order for the post-game and halftime measurements to agree? and b) what was the temperature of the Patriots footballs at the time they were refilled by the officials to 13.0 psig? For instance, we _know_ that the Patriots footballs had to have been inflated at halftime while they were still cool, otherwise the balls would have reached 13.0 psig equilibrium post-game. Instead they reached pressures exceeding 13.0 psig, definitively showing they were refilled before reaching equilibrium. Some quick calculations suggest, relative to a 74&deg;F post-game measurement, these balls had to be refilled at between 62&deg;F and 68&deg;F to 13.0 psig for the pressure to rise to the post-game levels at 74&deg;F. But, the Colts balls would have to have been measured at halftime at temperatures between 72&deg;F and 75&deg;F in order for the post-game and halftime measurements to coincide.</small>
+
+<small>I'd say it's close to completely evident that the halftime order of events was 1) check Patriots balls, 2) refill Patriots balls, 3) check Colts balls. And, if this is the case, the Colts measurements at halftime were at temperatures very near room temperature and the Patriots measurements at halftime were at temperatures much closer to the outside conditions. Therefore, it is both obvious and necessary for the Patriots balls to see a larger pressure differential than the Colts balls, and it is both obvious and necessary for the Patriots readings to have a higher variance. See the 'Various Notes of Note' section below for further discussion.</small>
+
+<hr />
+
+But, no no no. These results won't do. So, Anderson _must_ have used the Non-Logo Gauge. Well, fine. Here's the worst-case scenario, which _does_ look awfully bad. I'd bet that's why it was chosen as the scenario "more likely than not."
+
+<center>
+<table style="width:60%">
+    <tr>
+        <th bgcolor="#ccc" align="left">Patriots Ball Number</th>
+        <th bgcolor="#ccc" align="left">Average Halftime Reading (w/ Logo Gauge corrected) [psig]</th>
+        <th bgcolor="#ccc" align="left">Projected Pre-Game Reading on Non-Logo Gauge [psig]</th>
+    </tr>
+    <tr>
+        <td bgcolor="#fff">1</td>
+        <td bgcolor="#fff">11.46</td>
+        <td bgcolor="#fff">12.80</td>
+    </tr>
+    <tr>
+        <td bgcolor="#eee">2</td>
+        <td bgcolor="#eee">10.84</td>
+        <td bgcolor="#eee">12.09</td>
+    </tr>
+    <tr>
+        <td bgcolor="#fff">3</td>
+        <td bgcolor="#fff">11.14</td>
+        <td bgcolor="#fff">12.35</td>
+    </tr>
+    <tr>
+        <td bgcolor="#eee">4</td>
+        <td bgcolor="#eee">10.66</td>
+        <td bgcolor="#eee">11.80</td>
+    </tr>
+    <tr>
+        <td bgcolor="#fff">5</td>
+        <td bgcolor="#fff">11.09</td>
+        <td bgcolor="#fff">12.19</td>
+    </tr>
+    <tr>
+        <td bgcolor="#eee">6</td>
+        <td bgcolor="#eee">11.86</td>
+        <td bgcolor="#eee">12.66</td>
+    </tr>
+    <tr>
+        <td bgcolor="#fff">7</td>
+        <td bgcolor="#fff">11.89</td>
+        <td bgcolor="#fff">12.92</td>
+    </tr>
+    <tr>
+        <td bgcolor="#eee">8</td>
+        <td bgcolor="#eee">11.14</td>
+        <td bgcolor="#eee">12.09</td>
+    </tr>
+    <tr>
+        <td bgcolor="#fff">9</td>
+        <td bgcolor="#fff">10.96</td>
+        <td bgcolor="#fff">11.86</td>
+    </tr>
+    <tr>
+        <td bgcolor="#eee">10</td>
+        <td bgcolor="#eee">10.51</td>
+        <td bgcolor="#eee">11.34</td>
+    </tr>
+    <tr>
+        <td bgcolor="#fff">11</td>
+        <td bgcolor="#fff">10.94</td>
+        <td bgcolor="#fff">11.73</td>
+    </tr>
+    <tr>
+        <th bgcolor="#eee" align="left">Average</th>
+        <th bgcolor="#eee" align="left">11.11</th>
+        <th bgcolor="#eee" align="left">12.17</th>
+    </tr>
+</table>
+</center>
+<center><small>Projected pre-game pressure readings on the Non-Logo Gauge, assuming the Non-Logo Gauge was used for pre-game measurements. Half-time ball temperature 48&deg;F and heating towards room temperature, ending at 58&deg;F. Pre-game ball temperature 74&deg;F.</small></center>
+
+Yup. See. Cheatriots. I knew it all along! 8 of the 11 balls were under the allowable limit! The average was only 12.17 psig. Someone let the air out. I'll bet Tom Brady knew about it.
+
+In this scenario, if the Colts balls were measured immediately after the Patriots balls, they'd have an average of 13.04 psig. This is, I think, why Exponent chose this scenario. I don't know why they didn't consider that the Colts balls were measured later in halftime. In that case, they'd have an average of 12.62 psig, which doesn't match what Anderson originally reported.
+
+Of course, this scenario is only acceptable if you assume Anderson perfectly remembered what the pre-game pressure measurements were, but failed to recall which pressure gauge he used to make these measurements. Why this scenario was chosen seems a bit too obvious and evil, even for Roger Goodell. Why is the bolded one above not more logical?
+
+Finally, just to complete the circle, if the Logo Gauge was the gauge used for the pre-game measurements and we assume the average halftime pressure measurement of 11.5 psig for the Patriots balls, what pre-game and halftime temperatures would the balls have to be in order to produce a pre-game value of 12.5 psig or higher? I produced a heatmap ([you can see my work in producing this here](http://nbviewer.ipython.org/gist/drewfustin/85183dba59d2b2ed8c11)) showing the phase space for the pre-game and halftime temperatures that suggest no tampering took place. For instance, if you think the halftime ball temperature was 55&deg;F for a 11.5 psig reading (find 55&deg;F on the x-axis), then the pre-game temperature would have to be about 72&deg;F or higher for the initial pressure to have been 12.5 psig or higher (all the values on the y-axis that are white or red along the vertical about 55&deg;F on the x-axis).
+
+<center>![Temperature heatmap showing phase space for legal footballs](http://drewfustin.com/images/deflategate/temp_scenarios.png)</center>
+<center><small>Heatmap showing the predicted pre-game measured pressure for an 11.5 psig (at halftime) football, for all pre-game and halftime temperature possibilities. For a given pre-game and halftime temperature, the pre-game football measurement is 12.5 psig or higher if the color is white or red. It's below 12.5 psig in all phase space that is blue.</small></center>
+
+### Concluding Thoughts
+
+So, here we are. A legendary quarterback and the GOAT accused of cheating and suspended for 4 games (at a personal cost of 2 million dollars and a tarnished legacy). A flagship franchise stripped of 2 draft picks and fined 1 million dollars despite the fact that the Wells Report cleared them of responsibility. Two low-level employees all-but-fired. All because of a report that suggests that air wasn't even let out of the footballs, unless you choose to find a way to twist the math.
+
+To assign the level of scientific integrity that has been assigned to this study, I'd expect to have the pre-game measurements carefully recorded, along with the room temperature at the time of the recording. I'd also really expect for you to know which gauge you used to make this measurement. All other pressure measurements should _only_ be made with gauges that are calibrated to the original pressure gauge. It'd be nice to know what the atmospheric pressure was at all times too. And the relative humidity. I know Exponent did their best to try to determine what these all probably were, but we don't know what they actually were at the times in question. For example, the room in which the balls were checked pre-game could have been 70&deg;F normally, but what about if there are a dozen officials in the room? There are just so many factors that could be in play that change all of this, knowing solid numbers for everything that would affect these measurements is extremely important to the science.
+
+__None of this recording happened.__ And we are to assign a level of certainty to this process that passes scientific scrutiny? I'd bet even Bill Nye would agree that this is all a bit absurd.
+
+So, you win, NFL. You win. It's been a wonderful 22 years.
+
+___
+
+<small><sup><small>1</small></sup>psig is unit of pressure. It stands for "pounds per square inch gauge." This is what a pressure gauge records. It is _different_ from psia, which stands for "pounds per square inch absolute," by the value of the atmospheric pressure containing both the object being measured and the gauge. Usually (although conspicuously not recorded in this "scientific" investigation), atmospheric pressure is 14.7 psia. So, a gauge reading of 12.5 psig actually represents an internal pressure of (12.5 + 14.7 =) 27.2 psia.</small>
+
+___
+
+<small>__Various Notes of Note:__</small>
+
+<small>__Why did the Colts ball lose less pressure and have less variability?__</small>
+
+<small>Do you think this scenario is likely? The Patriots balls were immediately checked at halftime. Found to be below 12.5 psig, they were then refilled to get them to proper levels. After checking the Patriots balls and refilling them, the Colts balls were then checked. The officials could only get to 4 Colts balls before running out of time.</small>
+
+<small>This is the only order of events that makes sense. The officials wouldn't have checked only 4 of the Colts balls if they checked them before refilling the Patriots balls. They would have checked all 12 Colts balls and then run out of time refilling the Patriots balls. Right?</small>
+
+<small>So, if the order of events was check Patriots, refill Patriots, check Colts, and given that the temperature was increasing but asymptotically approaching room temperature, the Colts balls were checked at significantly __higher and steadier__ temperatures than the Patriots balls. They were higher because they were taken later, with more time for the temperature to reequilibrate. They were steadier because they were taken closer to the asymptote, where minute-by-minute temperature changes were less steep.</small>
+
+<small>If this is true, then two things would also be true of the Colts balls relative to the Patriots balls:</small>
+
+1. The pressure readings of the Colts balls would be much closer to their original pre-game measurements than the Patriots balls would be.
+2. The variation in the pressure readings of the Colts balls would be smaller than the variation in the Patriots balls because there is less rapid temperature changes and a more steady-state environment internally.
+
+<small>This latter point can be restated: if there is a trend in the data over time, then before we start calculating standard deviations from the mean, __we must first detrend the data__. Obviously, the variability of 11 measurements is higher than the variability of 4 measurements if the underlying thing being measured is changing over time, which the pressure clearly is -- the temperature is slowly ramping towards room temperature.</small>
+
+<center>![Football Pressure Measurements over Time](http://drewfustin.com/images/deflategate/readings_over_time.png)</center>
+<center><small>The pressure readings of footballs over time when temperature is slowly ramping. The variability of the measurements compared to the mean is obviously higher for the larger data set measured over the longer time. This plot is with pressure readings sorted by increasing pressure, not by ball number as reported in the Wells Report. If ball number is a stand-in for time, the scatter is more random around the mean, not increasing as in the sorted measurements. This plot is _only to illustrate the point_ that if temperature is changing throughout the measurements, then comparing each measurement to a flat mean (which assumes no change is fundamentally going on in the thing being measured) would naturally lead to a large variance. Consider yourself warned on this plot.</small></center>
+
+<small>How was this not considered when citing those two specific pieces as evidence against the Patriots?</small>
+
+<small>__What about those text messages?__</small>
+
+<small>I'll admit, the text messages are weird. Keep in mind, they're from _months_ before the game in question and don't clearly say anything about illegally deflating footballs. Sure, Jim McNally calls himself the "deflator." But consider the following:
+
+><small>Person 1: Hey killer, how's it going!?</small>
+><small>Person 2: Good man, good. Killer. Cool nickname.</small>
+><small>Steve: Hey guys!</small>
+><small>Person 2: Hey man.</small>
+><small>::Steve wanders away.::</small>
+><small>Police: Person 2, you're under arrest for the murder of Steve!</small>
+><small>Person 2: What?</small>
+><small>::Steve wanders back.::</small>
+><small>Person 2: But Steve's right here. He's not even dead.</small>
+><small>Police: Oh yeah? Well then why the nickname 'killer?' Likely story, killer. Guilty.</small>
+><small>Scene</small>
+
+<small>Yes, this is ridiculous. But, you'd _have_ to admit if no crime actually occurred and the balls were not, in fact, deflated in the AFC Championship Game, then any text messages referring to a nickname seem a little arbitrary to build a punishment upon.</small>
+
+<small>__Look, I'm not saying definitely that the Patriots weren't involved in some sort of ball deflation scheme. I'm just saying, so far, I've seen no actual evidence that it occurred in the one and only game in which they checked.__</small>

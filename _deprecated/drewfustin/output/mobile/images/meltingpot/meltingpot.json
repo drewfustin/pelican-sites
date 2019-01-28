@@ -1,0 +1,982 @@
+{
+	"NYC": {
+		"name": "New York, NY",
+		"coords": [-74.0064, 40.7142],
+		"restos": {
+			"chinese": 7.7,
+			"greek": 2.4,
+			"indian": 6.1,
+			"italian": 18.4,
+			"japanese": 8.9,
+			"latin": 3.4,
+			"mediterranean": 4.2,
+			"mexican": 7.0,
+			"middleeastern": 2.7,
+			"thai": 4.9
+		},
+		"orders": {
+			"chinese": 11.4,
+			"greek": 3.3,
+			"indian": 4.6,
+			"italian": 16.9,
+			"japanese": 11.9,
+			"latin": 3.1,
+			"mediterranean": 3.2,
+			"mexican": 10.0,
+			"middleeastern": 2.1,
+			"thai": 8.2
+		}
+	},
+	"LA": {
+		"name": "Los Angeles, CA",
+		"coords": [-118.2428, 34.0522],
+		"restos": {
+			"chinese": 6.6,
+			"greek": 1.7,
+			"indian": 6.6,
+			"italian": 18.0,
+			"japanese": 5.2,
+			"latin": 2.7,
+			"mediterranean": 6.9,
+			"mexican": 8.0,
+			"middleeastern": 4.9,
+			"thai": 12.6
+		},
+		"orders": {
+			"chinese": 12.5,
+			"greek": 2.3,
+			"indian": 6.2,
+			"italian": 23.5,
+			"japanese": 8.7,
+			"latin": 2.9,
+			"mediterranean": 5.6,
+			"mexican": 6.9,
+			"middleeastern": 2.5,
+			"thai": 19.1
+		}
+	},
+	"CHI": {
+		"name": "Chicago, IL",
+		"coords": [-87.6500, 41.8500],
+		"restos": {
+			"chinese": 10.8,
+			"greek": 1.5,
+			"indian": 4.2,
+			"italian": 16.6,
+			"japanese": 7.9,
+			"latin": 1.7,
+			"mediterranean": 4.0,
+			"mexican": 9.5,
+			"middleeastern": 3.1,
+			"thai": 7.9
+		},
+		"orders": {
+			"chinese": 14.3,
+			"greek": 1.4,
+			"indian": 3.2,
+			"italian": 23.8,
+			"japanese": 11.4,
+			"latin": 1.6,
+			"mediterranean": 3.6,
+			"mexican": 8.7,
+			"middleeastern": 2.8,
+			"thai": 14.2
+		}
+	},
+	"DC": {
+		"name": "Washington, DC",
+		"coords": [-77.0300, 38.8900],
+		"restos": {
+			"chinese": 12.7,
+			"greek": 2.3,
+			"indian": 5.5,
+			"italian": 15.6,
+			"japanese": 4.2,
+			"latin": 1.6,
+			"mediterranean": 5.9,
+			"mexican": 5.2,
+			"middleeastern": 5.1,
+			"thai": 6.3
+		},
+		"orders": {
+			"chinese": 24.5,
+			"greek": 3.9,
+			"indian": 3.9,
+			"italian": 18.6,
+			"japanese": 9.0,
+			"latin": 0.3,
+			"mediterranean": 6.8,
+			"mexican": 3.3,
+			"middleeastern": 4.0,
+			"thai": 7.8
+		}
+	},
+	"SF": {
+		"name": "San Francisco, CA",
+		"coords": [-122.4183, 37.7750],
+		"restos": {
+			"chinese": 14.4,
+			"greek": 1.0,
+			"indian": 10.9,
+			"italian": 13.4,
+			"japanese": 8.1,
+			"latin": 1.5,
+			"mediterranean": 4.6,
+			"mexican": 5.1,
+			"middleeastern": 3.0,
+			"thai": 11.1
+		},
+		"orders": {
+			"chinese": 19.1,
+			"greek": 2.1,
+			"indian": 11.3,
+			"italian": 18.6,
+			"japanese": 12.6,
+			"latin": 1.7,
+			"mediterranean": 4.2,
+			"mexican": 1.7,
+			"middleeastern": 4.7,
+			"thai": 12.9
+		}
+	},
+	"BOS": {
+		"name": "Boston, MA",
+		"coords": [-71.0603, 42.3583],
+		"restos": {
+			"chinese": 11.3,
+			"greek": 1.9,
+			"indian": 7.2,
+			"italian": 21.2,
+			"japanese": 10.4,
+			"latin": 1.9,
+			"mediterranean": 3.0,
+			"mexican": 5.0,
+			"middleeastern": 3.4,
+			"thai": 8.1
+		},
+		"orders": {
+			"chinese": 17.0,
+			"greek": 2.5,
+			"indian": 5.6,
+			"italian": 27.8,
+			"japanese": 13.7,
+			"latin": 1.8,
+			"mediterranean": 2.0,
+			"mexican": 4.7,
+			"middleeastern": 2.4,
+			"thai": 10.1
+		}
+	},
+	"PHI": {
+		"name": "Philadelphia, PA",
+		"coords": [-75.1642, 39.9522],
+		"restos": {
+			"chinese": 10.8,
+			"greek": 1.9,
+			"indian": 5.5,
+			"italian": 20.0,
+			"japanese": 6.1,
+			"latin": 0.2,
+			"mediterranean": 3.8,
+			"mexican": 4.7,
+			"middleeastern": 3.0,
+			"thai": 3.7
+		},
+		"orders": {
+			"chinese": 18.5,
+			"greek": 4.8,
+			"indian": 4.6,
+			"italian": 20.5,
+			"japanese": 9.9,
+			"latin": 0.7,
+			"mediterranean": 6.7,
+			"mexican": 4.8,
+			"middleeastern": 4.5,
+			"thai": 6.3
+		}
+	},
+	"DAL": {
+		"name": "Dallas/Ft. Worth, TX",
+		"coords": [-96.8039, 32.7828],
+		"restos": {
+			"chinese": 10.0,
+			"greek": 1.9,
+			"indian": 4.7,
+			"italian": 13.3,
+			"japanese": 4.2,
+			"latin": 1.7,
+			"mediterranean": 3.6,
+			"mexican": 11.1,
+			"middleeastern": 1.9,
+			"thai": 8.0
+		},
+		"orders": {
+			"chinese": 29.2,
+			"greek": 0.9,
+			"indian": 0.7,
+			"italian": 22.8,
+			"japanese": 8.2,
+			"latin": 0.0,
+			"mediterranean": 0.2,
+			"mexican": 13.2,
+			"middleeastern": 0.0,
+			"thai": 19.3
+		}
+	},
+	"MIA": {
+		"name": "Miami, FL",
+		"coords": [-80.2793, 25.7216],
+		"restos": {
+			"chinese": 8.6,
+			"greek": 2.8,
+			"indian": 2.4,
+			"italian": 18.0,
+			"japanese": 9.9,
+			"latin": 7.6,
+			"mediterranean": 4.6,
+			"mexican": 5.8,
+			"middleeastern": 1.7,
+			"thai": 4.1
+		},
+		"orders": {
+			"chinese": 16.1,
+			"greek": 1.7,
+			"indian": 1.3,
+			"italian": 27.5,
+			"japanese": 16.5,
+			"latin": 8.2,
+			"mediterranean": 3.4,
+			"mexican": 8.6,
+			"middleeastern": 1.3,
+			"thai": 3.9
+		}
+	},
+	"HOU": {
+		"name": "Houston, TX",
+		"coords": [-95.3631, 29.7631],
+		"restos": {
+			"chinese": 10.1,
+			"greek": 1.8,
+			"indian": 4.0,
+			"italian": 18.4,
+			"japanese": 2.9,
+			"latin": 3.6,
+			"mediterranean": 4.7,
+			"mexican": 8.7,
+			"middleeastern": 1.4,
+			"thai": 2.5
+		},
+		"orders": {
+			"chinese": 27.9,
+			"greek": 1.4,
+			"indian": 2.6,
+			"italian": 28.6,
+			"japanese": 2.6,
+			"latin": 3.6,
+			"mediterranean": 1.5,
+			"mexican": 5.5,
+			"middleeastern": 1.3,
+			"thai": 4.0
+		}
+	},
+	"ATL": {
+		"name": "Atlanta, GA",
+		"coords": [-84.3881, 33.7489],
+		"restos": {
+			"chinese": 19.9,
+			"greek": 1.8,
+			"indian": 3.6,
+			"italian": 7.6,
+			"japanese": 8.7,
+			"latin": 1.1,
+			"mediterranean": 3.6,
+			"mexican": 3.3,
+			"middleeastern": 1.8,
+			"thai": 10.1
+		},
+		"orders": {
+			"chinese": 39.0,
+			"greek": 1.4,
+			"indian": 4.0,
+			"italian": 7.4,
+			"japanese": 12.7,
+			"latin": 1.8,
+			"mediterranean": 2.1,
+			"mexican": 9.6,
+			"middleeastern": 1.4,
+			"thai": 17.6
+		}
+	},
+	"DET": {
+		"name": "Detroit, MI",
+		"coords": [-83.0458, 42.3314],
+		"restos": {
+			"chinese": 4.4,
+			"greek": 2.9,
+			"indian": 2.9,
+			"italian": 6.6,
+			"japanese": 5.1,
+			"latin": 0.0,
+			"mediterranean": 11.0,
+			"mexican": 3.7,
+			"middleeastern": 2.9,
+			"thai": 3.7
+		},
+		"orders": {
+			"chinese": 4.6,
+			"greek": 2.8,
+			"indian": 0.4,
+			"italian": 7.7,
+			"japanese": 7.2,
+			"latin": 0.0,
+			"mediterranean": 4.7,
+			"mexican": 0.3,
+			"middleeastern": 0.6,
+			"thai": 0.9
+		}
+	},
+	"SEA": {
+		"name": "Seattle, WA",
+		"coords": [-122.3331, 47.6097],
+		"restos": {
+			"chinese": 12.6,
+			"greek": 3.0,
+			"indian": 16.5,
+			"italian": 20.0,
+			"japanese": 3.5,
+			"latin": 0.0,
+			"mediterranean": 4.8,
+			"mexican": 3.5,
+			"middleeastern": 1.7,
+			"thai": 14.3
+		},
+		"orders": {
+			"chinese": 20.6,
+			"greek": 2.3,
+			"indian": 13.0,
+			"italian": 37.2,
+			"japanese": 4.3,
+			"latin": 0.0,
+			"mediterranean": 2.0,
+			"mexican": 0.3,
+			"middleeastern": 0.5,
+			"thai": 11.9
+		}
+	},
+	"PHO": {
+		"name": "Phoenix, AZ",
+		"coords": [-112.0200, 33.4300],
+		"restos": {
+			"chinese": 9.2,
+			"greek": 3.1,
+			"indian": 3.7,
+			"italian": 21.8,
+			"japanese": 1.7,
+			"latin": 1.4,
+			"mediterranean": 4.4,
+			"mexican": 5.4,
+			"middleeastern": 2.0,
+			"thai": 3.4
+		},
+		"orders": {
+			"chinese": 18.8,
+			"greek": 1.1,
+			"indian": 0.2,
+			"italian": 29.3,
+			"japanese": 1.4,
+			"latin": 0.4,
+			"mediterranean": 2.5,
+			"mexican": 5.7,
+			"middleeastern": 1.9,
+			"thai": 6.0
+		}
+	},
+	"MIN": {
+		"name": "Minneapolis/St. Paul, MN",
+		"coords": [-93.2636, 44.9800],
+		"restos": {
+			"chinese": 13.8,
+			"greek": 0.0,
+			"indian": 9.6,
+			"italian": 2.1,
+			"japanese": 4.3,
+			"latin": 0.0,
+			"mediterranean": 0.0,
+			"mexican": 3.2,
+			"middleeastern": 0.0,
+			"thai": 7.4
+		},
+		"orders": {
+			"chinese": 57.0,
+			"greek": 0.0,
+			"indian": 2.6,
+			"italian": 6.1,
+			"japanese": 7.7,
+			"latin": 0.0,
+			"mediterranean": 0.0,
+			"mexican": 1.9,
+			"middleeastern": 0.0,
+			"thai": 34.7
+		}
+	},
+	"CLE": {
+		"name": "Cleveland, OH",
+		"coords": [-81.6956, 41.4994],
+		"restos": {
+			"chinese": 23.5,
+			"greek": 0.0,
+			"indian": 5.9,
+			"italian": 0.0,
+			"japanese": 3.9,
+			"latin": 0.0,
+			"mediterranean": 5.9,
+			"mexican": 5.9,
+			"middleeastern": 0.0,
+			"thai": 0.0
+		},
+		"orders": {
+			"chinese": 43.9,
+			"greek": 0.0,
+			"indian": 0.7,
+			"italian": 0.0,
+			"japanese": 1.0,
+			"latin": 0.0,
+			"mediterranean": 0.4,
+			"mexican": 0.2,
+			"middleeastern": 0.0,
+			"thai": 0.0
+		}
+	},
+	"DEN": {
+		"name": "Denver, CO",
+		"coords": [-104.9842, 39.7392],
+		"restos": {
+			"chinese": 12.1,
+			"greek": 1.7,
+			"indian": 6.2,
+			"italian": 11.6,
+			"japanese": 6.8,
+			"latin": 1.7,
+			"mediterranean": 2.8,
+			"mexican": 9.9,
+			"middleeastern": 2.3,
+			"thai": 7.9
+		},
+		"orders": {
+			"chinese": 18.2,
+			"greek": 1.7,
+			"indian": 8.0,
+			"italian": 20.6,
+			"japanese": 8.1,
+			"latin": 0.4,
+			"mediterranean": 2.0,
+			"mexican": 3.4,
+			"middleeastern": 2.0,
+			"thai": 14.6
+		}
+	},
+	"SD": {
+		"name": "San Diego, CA",
+		"coords": [-117.1564, 32.7153],
+		"restos": {
+			"chinese": 1.8,
+			"greek": 6.4,
+			"indian": 7.6,
+			"italian": 17.3,
+			"japanese": 4.3,
+			"latin": 2.1,
+			"mediterranean": 5.2,
+			"mexican": 8.2,
+			"middleeastern": 3.0,
+			"thai": 5.8
+		},
+		"orders": {
+			"chinese": 5.4,
+			"greek": 3.9,
+			"indian": 5.2,
+			"italian": 33.3,
+			"japanese": 4.8,
+			"latin": 1.8,
+			"mediterranean": 4.0,
+			"mexican": 8.1,
+			"middleeastern": 2.9,
+			"thai": 12.8
+		}
+	},
+	"POR": {
+		"name": "Portland, OR",
+		"coords": [-122.6750, 45.5236],
+		"restos": {
+			"chinese": 9.0,
+			"greek": 0.0,
+			"indian": 5.6,
+			"italian": 7.9,
+			"japanese": 0.0,
+			"latin": 0.0,
+			"mediterranean": 0.0,
+			"mexican": 7.9,
+			"middleeastern": 6.7,
+			"thai": 10.1
+		},
+		"orders": {
+			"chinese": 28.5,
+			"greek": 0.0,
+			"indian": 1.4,
+			"italian": 19.5,
+			"japanese": 0.0,
+			"latin": 0.0,
+			"mediterranean": 0.0,
+			"mexican": 1.3,
+			"middleeastern": 3.1,
+			"thai": 24.1
+		}
+	},
+	"ORL": {
+		"name": "Orlando, FL",
+		"coords": [-81.3794, 28.5381],
+		"restos": {
+			"chinese": 6.7,
+			"greek": 0.0,
+			"indian": 5.6,
+			"italian": 11.1,
+			"japanese": 10.0,
+			"latin": 7.8,
+			"mediterranean": 5.6,
+			"mexican": 7.8,
+			"middleeastern": 3.3,
+			"thai": 0.0
+		},
+		"orders": {
+			"chinese": 23.5,
+			"greek": 0.0,
+			"indian": 0.9,
+			"italian": 22.6,
+			"japanese": 3.3,
+			"latin": 2.7,
+			"mediterranean": 6.2,
+			"mexican": 0.8,
+			"middleeastern": 15.0,
+			"thai": 0.0
+		}
+	},
+	"STL": {
+		"name": "St. Louis, MO",
+		"coords": [-90.2000, 38.6300],
+		"restos": {
+			"chinese": 7.1,
+			"greek": 0.0,
+			"indian": 4.5,
+			"italian": 15.2,
+			"japanese": 5.4,
+			"latin": 0.0,
+			"mediterranean": 1.8,
+			"mexican": 3.6,
+			"middleeastern": 2.7,
+			"thai": 1.8
+		},
+		"orders": {
+			"chinese": 25.9,
+			"greek": 0.0,
+			"indian": 0.4,
+			"italian": 9.7,
+			"japanese": 4.6,
+			"latin": 0.0,
+			"mediterranean": 0.1,
+			"mexican": 2.2,
+			"middleeastern": 1.2,
+			"thai": 0.2
+		}
+	},
+	"TAM": {
+		"name": "Tampa, FL",
+		"coords": [-82.4651, 27.9494],
+		"restos": {
+			"chinese": 9.9,
+			"greek": 0.0,
+			"indian": 3.5,
+			"italian": 12.1,
+			"japanese": 4.3,
+			"latin": 2.1,
+			"mediterranean": 1.4,
+			"mexican": 3.5,
+			"middleeastern": 2.1,
+			"thai": 3.5
+		},
+		"orders": {
+			"chinese": 20.5,
+			"greek": 0.0,
+			"indian": 0.7,
+			"italian": 16.5,
+			"japanese": 1.4,
+			"latin": 5.0,
+			"mediterranean": 2.4,
+			"mexican": 5.1,
+			"middleeastern": 0.0,
+			"thai": 2.3
+		}
+	},
+	"PIT": {
+		"name": "Pittsburgh, PA",
+		"coords": [-79.9961, 40.4406],
+		"restos": {
+			"chinese": 13.0,
+			"greek": 9.8,
+			"indian": 6.5,
+			"italian": 21.7,
+			"japanese": 4.9,
+			"latin": 1.6,
+			"mediterranean": 2.7,
+			"mexican": 2.7,
+			"middleeastern": 2.7,
+			"thai": 2.2
+		},
+		"orders": {
+			"chinese": 24.6,
+			"greek": 20.3,
+			"indian": 3.9,
+			"italian": 39.3,
+			"japanese": 4.9,
+			"latin": 1.1,
+			"mediterranean": 1.3,
+			"mexican": 0.2,
+			"middleeastern": 1.1,
+			"thai": 1.9
+		}
+	},
+	"CHA": {
+		"name": "Charlotte, NC",
+		"coords": [-80.8433, 35.2269],
+		"restos": {
+			"chinese": 14.3,
+			"greek": 0.0,
+			"indian": 7.1,
+			"italian": 12.5,
+			"japanese": 3.6,
+			"latin": 0.0,
+			"mediterranean": 0.0,
+			"mexican": 5.4,
+			"middleeastern": 0.0,
+			"thai": 0.0
+		},
+		"orders": {
+			"chinese": 50.6,
+			"greek": 0.0,
+			"indian": 15.4,
+			"italian": 0.9,
+			"japanese": 4.2,
+			"latin": 0.0,
+			"mediterranean": 0.0,
+			"mexican": 0.0,
+			"middleeastern": 0.0,
+			"thai": 0.0
+		}
+	},
+	"BAL": {
+		"name": "Baltimore, MD",
+		"coords": [-76.6122, 39.2904],
+		"restos": {
+			"chinese": 13.7,
+			"greek": 2.8,
+			"indian": 10.9,
+			"italian": 15.1,
+			"japanese": 4.2,
+			"latin": 0.0,
+			"mediterranean": 3.5,
+			"mexican": 3.5,
+			"middleeastern": 2.8,
+			"thai": 2.5
+		},
+		"orders": {
+			"chinese": 27.0,
+			"greek": 6.6,
+			"indian": 14.0,
+			"italian": 21.3,
+			"japanese": 6.8,
+			"latin": 0.0,
+			"mediterranean": 3.0,
+			"mexican": 0.4,
+			"middleeastern": 1.7,
+			"thai": 2.8
+		}
+	},
+	"COL": {
+		"name": "Columbus, OH",
+		"coords": [-82.9988, 39.9612],
+		"restos": {
+			"chinese": 3.9,
+			"greek": 9.2,
+			"indian": 9.2,
+			"italian": 10.5,
+			"japanese": 3.9,
+			"latin": 0.0,
+			"mediterranean": 2.6,
+			"mexican": 5.3,
+			"middleeastern": 0.0,
+			"thai": 0.0
+		},
+		"orders": {
+			"chinese": 4.5,
+			"greek": 18.2,
+			"indian": 3.9,
+			"italian": 22.6,
+			"japanese": 2.6,
+			"latin": 0.0,
+			"mediterranean": 6.9,
+			"mexican": 0.4,
+			"middleeastern": 0.0,
+			"thai": 0.0
+		}
+	},
+	"NAS": {
+		"name": "Nashville, TN",
+		"coords": [-86.7833, 36.1667],
+		"restos": {
+			"chinese": 3.7,
+			"greek": 1.5,
+			"indian": 5.2,
+			"italian": 17.9,
+			"japanese": 3.0,
+			"latin": 0.0,
+			"mediterranean": 2.2,
+			"mexican": 0.0,
+			"middleeastern": 1.5,
+			"thai": 6.7
+		},
+		"orders": {
+			"chinese": 21.3,
+			"greek": 0.0,
+			"indian": 1.5,
+			"italian": 33.4,
+			"japanese": 0.2,
+			"latin": 0.0,
+			"mediterranean": 0.0,
+			"mexican": 0.0,
+			"middleeastern": 0.0,
+			"thai": 2.9
+		}
+	},
+	"LV": {
+		"name": "Las Vegas, NV",
+		"coords": [-115.1728, 36.1146],
+		"restos": {
+			"chinese": 16.7,
+			"greek": 1.2,
+			"indian": 4.8,
+			"italian": 13.7,
+			"japanese": 3.0,
+			"latin": 1.8,
+			"mediterranean": 3.6,
+			"mexican": 2.4,
+			"middleeastern": 0.0,
+			"thai": 14.3
+		},
+		"orders": {
+			"chinese": 20.2,
+			"greek": 1.0,
+			"indian": 1.0,
+			"italian": 20.4,
+			"japanese": 1.4,
+			"latin": 0.1,
+			"mediterranean": 2.2,
+			"mexican": 0.7,
+			"middleeastern": 0.0,
+			"thai": 13.1
+		}
+	},
+	"MIL": {
+		"name": "Milwaukee, WI",
+		"coords": [-87.9065, 43.0389],
+		"restos": {
+			"chinese": 16.3,
+			"greek": 0.0,
+			"indian": 8.7,
+			"italian": 8.7,
+			"japanese": 4.3,
+			"latin": 0.0,
+			"mediterranean": 0.0,
+			"mexican": 6.5,
+			"middleeastern": 4.3,
+			"thai": 0.0
+		},
+		"orders": {
+			"chinese": 28.2,
+			"greek": 0.0,
+			"indian": 5.6,
+			"italian": 12.3,
+			"japanese": 10.2,
+			"latin": 0.0,
+			"mediterranean": 0.0,
+			"mexican": 4.2,
+			"middleeastern": 2.1,
+			"thai": 0.0
+		}
+	},
+	"PRO": {
+		"name": "Providence, RI",
+		"coords": [-71.4128, 41.8240],
+		"restos": {
+			"chinese": 14.9,
+			"greek": 0.0,
+			"indian": 9.0,
+			"italian": 23.9,
+			"japanese": 6.0,
+			"latin": 0.0,
+			"mediterranean": 0.0,
+			"mexican": 4.5,
+			"middleeastern": 0.0,
+			"thai": 3.0
+		},
+		"orders": {
+			"chinese": 27.6,
+			"greek": 0.0,
+			"indian": 0.6,
+			"italian": 30.8,
+			"japanese": 0.4,
+			"latin": 0.0,
+			"mediterranean": 0.0,
+			"mexican": 0.9,
+			"middleeastern": 0.0,
+			"thai": 4.0
+		}
+	},
+	"SJ": {
+		"name": "San Jose, CA",
+		"coords": [-121.8950, 37.3394],
+		"restos": {
+			"chinese": 7.2,
+			"greek": 2.9,
+			"indian": 16.3,
+			"italian": 12.0,
+			"japanese": 3.8,
+			"latin": 1.0,
+			"mediterranean": 6.7,
+			"mexican": 14.4,
+			"middleeastern": 2.9,
+			"thai": 4.3
+		},
+		"orders": {
+			"chinese": 9.6,
+			"greek": 2.2,
+			"indian": 14.6,
+			"italian": 28.7,
+			"japanese": 4.8,
+			"latin": 0.2,
+			"mediterranean": 1.1,
+			"mexican": 6.6,
+			"middleeastern": 0.1,
+			"thai": 4.4
+		}
+	},
+	"IND": {
+		"name": "Indianapolis, IN",
+		"coords": [-86.1581, 39.7684],
+		"restos": {
+			"chinese": 9.8,
+			"greek": 7.3,
+			"indian": 12.2,
+			"italian": 0.0,
+			"japanese": 4.9,
+			"latin": 0.0,
+			"mediterranean": 4.9,
+			"mexican": 9.8,
+			"middleeastern": 0.0,
+			"thai": 0.0
+		},
+		"orders": {
+			"chinese": 27.4,
+			"greek": 2.0,
+			"indian": 21.5,
+			"italian": 0.0,
+			"japanese": 0.0,
+			"latin": 0.0,
+			"mediterranean": 1.9,
+			"mexican": 20.8,
+			"middleeastern": 0.0,
+			"thai": 0.0
+		}
+	},
+	"AUS": {
+		"name": "Austin, TX",
+		"coords": [-97.7431, 30.2672],
+		"restos": {
+			"chinese": 11.0,
+			"greek": 0.0,
+			"indian": 9.6,
+			"italian": 6.6,
+			"japanese": 6.6,
+			"latin": 0.0,
+			"mediterranean": 2.9,
+			"mexican": 9.6,
+			"middleeastern": 2.2,
+			"thai": 5.9
+		},
+		"orders": {
+			"chinese": 18.7,
+			"greek": 0.0,
+			"indian": 8.4,
+			"italian": 15.3,
+			"japanese": 4.3,
+			"latin": 0.0,
+			"mediterranean": 7.5,
+			"mexican": 5.3,
+			"middleeastern": 0.6,
+			"thai": 6.0
+		}
+	},
+	"SAC": {
+		"name": "Sacramento, CA",
+		"coords": [-121.4944, 38.5816],
+		"restos": {
+			"chinese": 6.2,
+			"greek": 0.0,
+			"indian": 18.5,
+			"italian": 11.1,
+			"japanese": 0.0,
+			"latin": 0.0,
+			"mediterranean": 2.5,
+			"mexican": 3.7,
+			"middleeastern": 0.0,
+			"thai": 6.2
+		},
+		"orders": {
+			"chinese": 12.9,
+			"greek": 0.0,
+			"indian": 17.3,
+			"italian": 6.8,
+			"japanese": 0.0,
+			"latin": 0.0,
+			"mediterranean": 0.1,
+			"mexican": 1.0,
+			"middleeastern": 0.0,
+			"thai": 0.0
+		}
+	},
+	"RIV": {
+		"name": "Riverside, CA",
+		"coords": [-117.3962, 33.9533],
+		"restos": {
+			"chinese": 2.9,
+			"greek": 0.0,
+			"indian": 14.3,
+			"italian": 11.4,
+			"japanese": 0.0,
+			"latin": 0.0,
+			"mediterranean": 4.3,
+			"mexican": 10.0,
+			"middleeastern": 4.3,
+			"thai": 7.1
+		},
+		"orders": {
+			"chinese": 10.0,
+			"greek": 0.0,
+			"indian": 10.6,
+			"italian": 12.1,
+			"japanese": 0.0,
+			"latin": 0.0,
+			"mediterranean": 0.5,
+			"mexican": 2.6,
+			"middleeastern": 1.6,
+			"thai": 28.4
+		}
+	}
+}

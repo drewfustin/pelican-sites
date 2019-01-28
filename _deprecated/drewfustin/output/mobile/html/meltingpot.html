@@ -1,0 +1,991 @@
+<!DOCTYPE html>
+<meta charset='utf-8'>
+
+<head>
+  <link href='http://fonts.googleapis.com/css?family=Raleway:400,200,700' rel='stylesheet' type='text/css'>
+  <link href='/images/meltingpot/gh.png' rel='shortcut icon' type='image/png'>
+  <meta property="og:title" content="Mappin' the Melting Pot" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="http://drewfustin.com/html/meltingpot.html" />
+  <meta property="og:image" content="/images/meltingpot/og.png" />
+<style>
+
+body {
+  background-color: #fffaee;
+  width: 960px;
+  margin: 0 auto;
+}
+
+.background {
+  fill: none;
+  pointer-events: all;
+}
+
+#states {
+  fill: #aaa;
+}
+
+#state-borders {
+  fill: none;
+  stroke: #fff;
+  stroke-width: 1.0px;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+  pointer-events: none;
+}
+
+cityname.tooltip {
+  position: absolute;
+  text-align: center;
+  padding: 5px;
+  font: 14px 'Raleway',Helvetica,sans-serif;
+  color: white;
+  background-color: rgba(0,0,0,0.7);
+  border: 0px;
+  border-radius: 4px;
+  pointer-events: none;
+}
+
+hovernumber.tooltip {
+  position: absolute;
+  text-align: center;
+  font: 14px 'Raleway',Helvetica,sans-serif;
+  color: white;
+  background-color: none;
+  pointer-events: none;
+}
+
+div.top {
+  width: 960px;
+}
+
+div.topLeft {
+  float: left;
+  width: 450px;
+  font: 25px 'Raleway',Helvetica,sans-serif;
+  color: black;
+  font-weight: 200;
+}
+
+div.lede {
+  margin-top: 40px;
+  padding-left: 80px;
+}
+
+div.topRight {
+  float: right;
+  padding-top: 170px;
+  width: 390px;
+  font: 15px 'Raleway',Helvetica,sans-serif;
+  color: black;
+  font-weight: 400;
+}
+
+div.legend {
+  font-size: 14px;
+}
+
+div.d3 {
+  clear: both;
+  width: 960px;
+  background-color: #fff;
+  border: 1px solid;
+}
+
+div.cuisContainer {
+  width: 960px;
+  background-color: #fff;
+  text-align: center;
+}
+
+.cuisines {
+  width: 130px;
+  background-color: #ddd;
+  border: 0px;
+  cursor: pointer;
+  font: 12px 'Raleway',Helvetica,sans-serif;
+  padding-top: 5px;
+  text-transform: uppercase;
+  font-weight: 400;
+     -moz-transition: all 0.15s;
+       -o-transition: all 0.15s;
+  -webkit-transition: all 0.15s;
+          border-radius: 2px;
+     -moz-border-radius: 2px;
+       -o-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  transition: all 0.2s;
+  background: -webkit-gradient(linear, left top, left bottom, from(#ddd), to(#aaa));
+  background: -moz-linear-gradient(top,  #ddd,  #aaa);
+  filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#ddd', endColorstr='#aaa');
+}
+
+.cuisines:hover {
+  background-color: #faa633;
+  color: white;
+  background: -webkit-gradient(linear, left top, left bottom, from(#faa633), to(#af7423));
+  background: -moz-linear-gradient(top,  #faa633,  #af7423);
+  filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#faa633', endColorstr='#af7423');
+}
+
+.cuisines.selected {
+  background-color: #c4122f;
+  color: white;
+  background: -webkit-gradient(linear, left top, left bottom, from(#c4122f), to(#890c20));
+  background: -moz-linear-gradient(top,  #c4122f,  #890c20);
+  filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#c4122f', endColorstr='#890c20');
+}
+
+.cuislab {
+  width: 130px;
+  background-color: #fff;
+  border: 0px;
+  font: 12px 'Raleway',Helvetica,sans-serif;
+  font-weight: 700;
+  padding-top: 5px;
+}
+
+div.graphic {
+  width: 960px;
+  background-color: #fff;
+}
+
+.deets {
+  font: 15px 'Raleway',Helvetica,sans-serif;
+  font-weight: 400;
+  color: #fff;
+}
+
+.help {
+  font: 15px 'Raleway',Helvetica,sans-serif;
+  font-weight: 400;
+  color: #000;
+}
+
+div.footer {
+  width: 960px;
+  text-align: right;
+}
+
+</style>
+</head>
+
+<body>
+
+  <div id="container">
+
+    <div class="top">
+
+      <div class="topLeft">
+          <div class="header">
+            <img src="/images/meltingpot/header.png">
+          </div>
+          <div class="lede">
+            No, no – this isn’t a map of that fondue restaurant’s locations. <br>
+            This is the real deal: America’s culinary diversity splayed out on an interactive map.
+          </div>
+      </div>
+       <div class="topRight">
+          <div class="description">
+            GrubHub works with more than 20,000 restaurants in 500+ cities, and we’ve got restaurants in our network representing a whopping <b>69 different ethnic cuisines</b>. So after schooling ourselves in the cultural buffet that is America, we cobbled together this map, which tracks both the demand for and availability of America’s top ethnic cuisines.<br><br>
+            Go ahead and click around to watch the trends blossom across this immaculate digital representation of our great Union. Select "All" and click on a major U.S. city to see how popular ethnic cuisines fare. Select an ethnic cuisine to see the cities where the cuisine ranks most popular, and click on a particular city to see how diner orders compare to restaurant offerings.<br><br>
+          </div>
+          <div class="legend">
+            <table>
+              <tr>
+                <td><img src="/images/meltingpot/red_dot.png"></td>
+                <td><font color="#c4122f">Percentage of GrubHub <b>orders</b> in each city from a restaurant serving a particular ethnic cuisine</font></td>
+              </tr>
+              <tr>
+                <td><img src="/images/meltingpot/orange_dot.png"></td>
+                <td><font color="#faa633">Percentage of GrubHub <b>restaurants</b> in each city that offer a particular ethnic cuisine</font></td>
+              </tr>
+            </table><br>
+          </div>
+      </div>
+
+    </div>
+
+    <div class="clear"></div>
+
+    <div class="d3">
+
+      <div class="cuisContainer">
+        <br>
+        <button id="sort" class="cuislab">Sort by cuisine:</button>
+        <button id="none" class="cuisines selected">All</button>
+        <button id="chinese" class="cuisines">Chinese</button>
+        <button id="greek" class="cuisines">Greek</button>
+        <button id="indian" class="cuisines">Indian</button>
+        <button id="italian" class="cuisines">Italian</button>
+        <br>
+        <button id="japanese" class="cuisines">Japanese</button>
+        <button id="latin" class="cuisines">Latin American</button>
+        <button id="mediterranean" class="cuisines">Mediterranean</button>
+        <button id="mexican" class="cuisines">Mexican</button>
+        <button id="middleeastern" class="cuisines">Middle-Eastern</button>
+        <button id="thai" class="cuisines">Thai</button>
+        <br>
+      </div>
+
+      <div id="helpBar"></div>
+      <div id="graphic"></div>
+
+    </div>
+
+    <div class="clear"></div><br>
+
+    <div class="footer">
+      <a href="http://www.grubhub.com"><img src="/images/meltingpot/gh_logo.png"></a>
+    </div>
+
+  </div>
+
+<!--  -->
+<!-- d3 functionality with lots of sketchy js thrown in -->
+<!--  -->
+
+<script src='http://d3js.org/d3.v3.min.js'></script>
+<script src='http://d3js.org/topojson.v1.min.js'></script>
+
+<script>
+
+var width = 960,
+    height = 500,
+    centered,
+    zoomed;
+
+var projection = d3.geo.albers()
+    .scale(1070)
+    .translate([width / 2, height / 2]);
+
+var path = d3.geo.path()
+    .projection(projection);
+
+var help = d3.select('#helpBar').append('svg')
+    .attr('width', width)
+    .attr('height', 70+'px');
+help.append('text')
+  .attr('class', 'help')
+  .attr('id', 'head')
+  .attr('x', 76)
+  .attr('y', 35)
+  .attr('fill', 'black')
+  .text('Cuisine Cornucopia')
+  .style('font-size', '22px')
+  .style('opacity', 0)
+  .style('position', 'absolute');
+d3.select('.help#head').transition()
+  .style('opacity', 1)
+  .duration(750);
+help.append('text')
+  .attr('class', 'help')
+  .attr('id', 'text')
+  .attr('x', 76)
+  .attr('y', 55)
+  .attr('fill', 'black')
+  .text('Click on a circle to see how popular ethnic cuisines fare in major U.S. cities.')
+  .style('font-size', '16px')
+  .style('opacity', 0)
+  .style('position', 'absolute');
+d3.select('.help#text').transition()
+  .style('opacity', 1)
+  .duration(750);
+
+var svg = d3.select('#graphic').append('svg')
+    .attr('width', width)
+    .attr('height', height);
+
+var g = svg.append('g');
+
+var data;
+d3.json('/extra/meltingpot/meltingpot.json', function(error, json) {
+  if (error) return console.warn(error);
+  data = json;
+});
+
+var cityname = d3.select('body').append('cityname')
+    .attr('class', 'tooltip')
+    .style('opacity', 0);
+
+var hovernumber = d3.select('body').append('hovernumber')
+    .attr('class', 'tooltip')
+    .style('opacity', 0);
+
+d3.json('/extra/meltingpot/us.json', function(error, us) {
+  g.append('rect')
+      .attr('x', -50)
+      .attr('y', -50)
+      .attr('width', width+100)
+      .attr('height', height+100)
+      .attr('fill', 'white')
+      .on('click', unclick);
+
+  g.append('g')
+      .attr('id', 'states')
+    .selectAll('path')
+      .data(topojson.feature(us, us.objects.states).features)
+    .enter().append('path')
+      .attr('d', path)
+    .on('click', unclick);
+
+  g.append('path')
+      .datum(topojson.mesh(us, us.objects.states, function(a, b) { return a !== b; }))
+      .attr('id', 'state-borders')
+      .attr('d', path)
+    .on('click', unclick);
+
+  window.setTimeout(function() {
+    for(var i=0; i<Object.keys(data).length; i++)
+    {
+      makeCircle(data[Object.keys(data)[i]].name, projection(data[Object.keys(data)[i]].coords)[0], projection(data[Object.keys(data)[i]].coords)[1], 0);
+    }
+    d3.selectAll('circle')
+      .transition()
+      .duration(750)
+      .attr('fill','black')
+      .attr('r',5);
+  }, 1000);
+
+
+});
+
+function makeCircle(id, cx, cy, r) {
+  var circ = g.append('circle')
+    .attr('id', id)
+    .attr('cx', cx)
+    .attr('cy', cy)
+    .attr('r', r)
+    .attr('fill', '#c4122f')
+    .attr('stroke', 'white')
+    .attr('stroke-width', 1)
+    .attr('fill-opacity', 0.8)
+    .on('click', clicked)
+    .on('mouseover', function() {
+      if (centered == null) {
+        cityname.transition()
+          .style('opacity', 0.9);
+        cityname.html( this.getAttribute('id') )
+          .style('left', Number(this.getAttribute('cx'))+Number(svg[0][0].offsetLeft)+15 + 'px')
+          .style('top', Number(this.getAttribute('cy'))+Number(svg[0][0].offsetTop)-13 + 'px');
+      }
+    })
+    .on('mouseout', function() {
+      cityname.transition()
+        .style('opacity', 0);
+    })
+
+  return circ;
+}
+
+function unclick() {
+  var x, y, k;
+
+  x = width / 2;
+  y = height / 2;
+  k = 1;
+  centered = null;
+
+  d3.selectAll('circle')
+    .attr('stroke', 'white')
+    .attr('fill-opacity', 0.7);
+
+  d3.selectAll('.deets')
+    .transition()
+    .duration(500)
+    .style('opacity', 0);
+  d3.selectAll('.deets')
+    .transition()
+    .delay(500)
+    .remove();
+
+  displayHelp(this);
+
+  g.transition()
+    .duration(750)
+    .attr('transform', 'translate(' + width / 2 + ',' + height / 2 + ')scale(' + k + ')translate(' + -x + ',' + -y + ')')
+    .style('stroke-width', 1.5 / k + 'px');
+}
+
+function clicked() {
+  var x, y, k;
+
+  d3.selectAll('circle')
+    .attr('stroke', 'white')
+    .attr('fill-opacity', 0.8);
+
+  if (centered == null) {
+    var cx = this.getAttribute('cx');
+    var cy = this.getAttribute('cy');
+    x = Number(this.getAttribute('cx'))+75;
+    y = Number(this.getAttribute('cy'));
+    k = 4;
+    centered = this;
+
+    d3.selectAll('circle')
+      .attr('fill-opacity', function() {return (this.getAttribute('cx') == cx && this.getAttribute('cy') == cy) ? 1:0.8; });
+
+    cityname.transition()
+      .style('opacity', 0);
+
+    d3.selectAll('.deets').remove();
+
+    showDeets(this);
+    displayHelp(this);
+  } else if (this.id == centered.id) {
+    x = width / 2;
+    y = height / 2;
+    k = 1;
+    centered = null;
+
+    d3.selectAll('.deets')
+      .transition()
+      .duration(500)
+      .style('opacity', 0);
+    d3.selectAll('.deets')
+      .transition()
+      .delay(500)
+      .remove();
+    displayHelp(d3.select('.selected')[0][0]);
+  } else {
+    var cx = this.getAttribute('cx');
+    var cy = this.getAttribute('cy');
+    x = Number(this.getAttribute('cx'))+75;
+    y = Number(this.getAttribute('cy'));
+    k = 4;
+    centered = this;
+
+    d3.selectAll('circle')
+      .attr('fill-opacity', function() {return (this.getAttribute('cx') === cx && this.getAttribute('cy') === cy) ? 1:0.8; });
+
+    cityname.transition()
+      .style('opacity', 0);
+
+    d3.selectAll('.deets').remove();
+
+    showDeets(this);
+    displayHelp(this);
+  }
+
+  g.transition()
+      .duration(750)
+      .attr('transform', 'translate(' + width / 2 + ',' + height / 2 + ')scale(' + k + ')translate(' + -x + ',' + -y + ')')
+      .style('stroke-width', 1.5 / k + 'px');
+}
+
+function showDeets(a) {
+  var dx = 250, dy = 30, dw = 500, dh = 440;
+
+  svg.append('rect')
+    .attr('class', 'deets')
+    .attr('id', 'drect')
+    .attr('x', dx)
+    .attr('y', dy)
+    .attr('width', dw)
+    .attr('height', dh)
+    .attr('rx', 10)
+    .attr('ry', 10)
+    .attr('fill', 'black')
+    .style('opacity', 0);
+  d3.select('rect#drect').transition()
+    .style('opacity', 0.8)
+    .duration(1500);
+
+  svg.append('text')
+    .attr('class', 'deets')
+    .attr('id', 'dtext')
+    .text(a.id)
+    .attr('x', dx + dw/2)
+    .attr('y', dy + 40)
+    .attr('fill', 'white')
+    .attr('text-anchor', 'middle')
+    .style('font-size', '30px')
+    .style('opacity', 0);
+  d3.select('text#dtext').transition()
+    .style('opacity', 1)
+    .duration(1500);
+
+  svg.append('line')
+    .attr('class', 'deets')
+    .attr('id', 'dline')
+    .attr('x1', dx + 30)
+    .attr('y1', dy + 50)
+    .attr('x2', dx + dw - 30)
+    .attr('y2', dy + 50)
+    .attr('stroke-width', 1)
+    .attr('stroke', 'white')
+    .style('opacity', 0);
+  d3.select('line#dline').transition()
+    .style('opacity', 0.7)
+    .duration(1500);
+
+  if (d3.select('.cuisines.selected')[0][0] !== d3.select('button#none')[0][0]) {
+    deetsNumbers(a, dx, dy, dw, dh);
+  } else {
+    deetsBar(a, dx, dy, dw, dh);
+  }
+
+}
+
+function deetsNumbers(a, dx, dy, dw, dh) {
+  var cuis = d3.select('.cuisines.selected').attr('id');
+  for (var key in data) {
+    if (data[key].name == a.id) {
+      res = Math.round(data[key].restos[cuis]);
+      ord = Math.round(data[key].orders[cuis]);
+    }
+  }
+
+  svg.append('text')
+    .attr('class', 'deets')
+    .attr('id', 'drestos')
+    .text(res + '%')
+    .attr('x', dx + dw/2 - 100)
+    .attr('y', dy + 335)
+    .attr('fill', '#faa633')
+    .style('font-size', '70px')
+    .attr('text-anchor', 'end')
+    .style('opacity', 0);
+  svg.append('text')
+    .attr('class', 'deets')
+    .attr('id', 'dorders')
+    .text(ord + '%')
+    .attr('x', dx + dw/2 -100)
+    .attr('y', dy + 175)
+    .attr('fill', '#c4122f')
+    .style('font-size', '70px')
+    .attr('text-anchor', 'end')
+    .style('opacity', 0);
+
+  svg.append('text')
+    .attr('class', 'deets')
+    .attr('id', 'drestos')
+    .text('of restaurants feature')
+    .attr('x', dx + dw - 330)
+    .attr('y', dy + 300)
+    .attr('fill', 'white')
+    .style('font-size', '25px')
+    .style('opacity', 0);
+  svg.append('text')
+    .attr('class', 'deets')
+    .attr('id', 'drestos')
+    .text(d3.select('.cuisines.selected')[0][0].innerHTML + ' cuisine')
+    .attr('x', dx + dw - 330)
+    .attr('y', dy + 340)
+    .attr('fill', 'white')
+    .style('font-size', '25px')
+    .style('opacity', 0);
+
+  svg.append('text')
+    .attr('class', 'deets')
+    .attr('id', 'dorders')
+    .text('of orders are from')
+    .attr('x', dx + dw - 330)
+    .attr('y', dy + 140)
+    .attr('fill', 'white')
+    .style('font-size', '25px')
+    .style('opacity', 0);
+  svg.append('text')
+    .attr('class', 'deets')
+    .attr('id', 'dorders')
+    .text(d3.select('.cuisines.selected')[0][0].innerHTML + ' restaurants')
+    .attr('x', dx + dw - 330)
+    .attr('y', dy + 180)
+    .attr('fill', 'white')
+    .style('font-size', '25px')
+    .style('opacity', 0);
+
+  d3.selectAll('text#drestos').transition()
+    .style('opacity', 1)
+    .duration(1500);
+  d3.selectAll('text#dorders').transition()
+    .style('opacity', 1)
+    .duration(1500);
+}
+
+function deetsBar(a, dx, dy, dw, dh) {
+  var h = 30;
+
+  var cuis = ['italian', 'chinese', 'japanese', 'thai', 'mexican', 'indian', 'mediterranean', 'greek', 'middleeastern', 'latin'];
+
+  svg.append('rect')
+    .attr('class', 'deets')
+    .attr('id', 'legOrd')
+    .attr('x', dx + dw + 15)
+    .attr('y', dy + 60)
+    .attr('width', 20)
+    .attr('height', 20)
+    .attr('fill', '#c4122f')
+    .style('opacity', 0);
+  d3.select('rect#legOrd').transition()
+    .style('opacity', 1)
+    .duration(1500);
+  svg.append('text')
+    .attr('class', 'deets')
+    .attr('id', 'legOrd')
+    .text('Percent of Orders')
+    .attr('x', dx + dw + 40)
+    .attr('y', dy + 77)
+    .style('font-size', 15)
+    .attr('fill', 'black')
+    .style('opacity', 0);
+  d3.selectAll('text#legOrd').transition()
+    .style('opacity', 1)
+    .duration(1500);
+
+  svg.append('rect')
+    .attr('class', 'deets')
+    .attr('id', 'legRes')
+    .attr('x', dx + dw + 15)
+    .attr('y', dy + 90)
+    .attr('width', 20)
+    .attr('height', 20)
+    .attr('fill', '#faa633')
+    .style('opacity', 0);
+  d3.select('rect#legRes').transition()
+    .style('opacity', 1)
+    .duration(1500);
+  svg.append('text')
+    .attr('class', 'deets')
+    .attr('id', 'legRes')
+    .text('Percent of Restaurants')
+    .attr('x', dx + dw + 40)
+    .attr('y', dy + 107)
+    .style('font-size', 15)
+    .attr('fill', 'black')
+    .style('opacity', 0);
+  d3.selectAll('text#legRes').transition()
+    .style('opacity', 1)
+    .duration(1500);
+
+  for (var i=0; i<7; i++) {
+    svg.append('line')
+      .attr('class', 'deets')
+      .attr('id', 'axis' + i)
+      .attr('x1', dx + 159 + i*51.5)
+      .attr('y1', dy + dh - 20)
+      .attr('x2', dx + 159 + i*51.5)
+      .attr('y2', dy + 60)
+      .attr('stroke-width', 1)
+      .attr('stroke', 'white')
+      .style('opacity', 0);
+    d3.select('line#axis' + i).transition()
+      .style('opacity', 0.2)
+      .duration(1500);
+
+    svg.append('text')
+      .attr('class', 'deets')
+      .attr('id', 'axLab' + i)
+      .text(i*10 + '%')
+      .attr('x', dx + 158 + i*51.5)
+      .attr('y', dy + dh - 20)
+      .attr('fill', 'white')
+      .style('font-size', 12)
+      .attr('text-anchor', 'end')
+      .style('opacity', 0);
+    d3.selectAll('text#axLab' + i).transition()
+      .style('opacity', 0.2)
+      .duration(1500);
+  }
+
+  for (var key in data) {
+    if (data[key].name == a.id) {
+      for (var i=0; i<10; i++) {
+
+        svg.append('text')
+          .attr('class', 'deets')
+          .attr('id', 'lab' + i)
+          .text(d3.select('button#' + cuis[i])[0][0].innerHTML)
+          .attr('x', dx + 155)
+          .attr('y', dy + 82 + i*(h+5))
+          .attr('fill', 'white')
+          .style('font-size', 20)
+          .style('font-weight', 200)
+          .attr('text-anchor', 'end')
+          .style('opacity', 0);
+        d3.selectAll('text#lab' + i).transition()
+          .style('opacity', 1)
+          .duration(1500);
+
+        if (data[key]['restos'][cuis[i]] + data[key]['orders'][cuis[i]] === 0) {
+          svg.append('text')
+            .attr('class', 'deets')
+            .attr('id', 'toosmall' + i)
+            .text('not enough data')
+            .attr('x', dx + 160)
+            .attr('y', dy + 82 + i*(h+5))
+            .attr('fill', 'grey')
+            .style('font-size', 15)
+            .style('font-style', 'italic')
+            .style('opacity', 0);
+          d3.selectAll('text#toosmall' + i).transition()
+            .style('opacity', 1)
+            .duration(1500);
+        }
+
+        svg.append('rect')
+          .attr('class', 'deets')
+          .attr('id', 'ord' + i)
+          .attr('x', dx + 160)
+          .attr('y', dy + 60 + i*(h+5))
+          .attr('width', 0)
+          .attr('height', h/2)
+          .attr('fill', '#c4122f')
+          .style('opacity', 0.8)
+          .on('mouseover', function() {
+            hovernumber.transition()
+              .style('opacity', 0.9);
+            hovernumber.html( (Math.round(this.getAttribute('width')/5.15) < 0.5) ? '< 1%':Math.round(this.getAttribute('width')/5.15) + '%' )
+              .style('left', svg[0][0].offsetLeft+Number(d3.select(this)[0][0].getAttribute('x'))+Number(d3.select(this)[0][0].getAttribute('width'))+1 + 'px')
+              .style('top', svg[0][0].offsetTop+Number(d3.select(this)[0][0].getAttribute('y'))-1 + 'px');
+          })
+          .on('mouseout', function() {
+            hovernumber.transition()
+              .style('opacity', 0);
+          });
+        d3.select('rect#ord' + i).transition()
+          .attr('width', 5.15*data[key]['orders'][cuis[i]])
+          .duration(1500);
+        svg.append('rect')
+          .attr('class', 'deets')
+          .attr('id', 'res' + i)
+          .attr('x', dx + 160)
+          .attr('y', dy + 60 + h/2 + i*(h+5))
+          .attr('width', 0)
+          .attr('height', h/2)
+          .attr('fill', '#faa633')
+          .style('opacity', 0.8)
+          .on('mouseover', function() {
+            hovernumber.transition()
+              .style('opacity', 0.9);
+            hovernumber.html( (Math.round(this.getAttribute('width')/5.15) < 0.5) ? '< 1%':Math.round(this.getAttribute('width')/5.15) + '%' )
+              .style('left', svg[0][0].offsetLeft+Number(d3.select(this)[0][0].getAttribute('x'))+Number(d3.select(this)[0][0].getAttribute('width'))+1 + 'px')
+              .style('top', svg[0][0].offsetTop+Number(d3.select(this)[0][0].getAttribute('y'))-1 + 'px');
+          })
+          .on('mouseout', function() {
+            hovernumber.transition()
+              .style('opacity', 0);
+          });
+        d3.select('rect#res' + i).transition()
+          .attr('width', 5.15*data[key]['restos'][cuis[i]])
+          .duration(1500);
+      }
+    }
+  }
+}
+
+d3.selectAll('.cuisines')
+  .on('click', get_cuisines);
+
+  function get_cuisines() {
+    unclick();
+
+    if (d3.select(this).classed('selected') == true){
+      displayHelp(d3.select('button#none')[0][0]);
+
+      d3.select(this)
+        .classed('selected', false);
+      d3.select('button#none')
+        .classed('selected', true);
+      d3.selectAll('circle').remove();
+      for(var i=0; i<Object.keys(data).length; i++)
+      {
+        makeCircle(data[Object.keys(data)[i]].name, projection(data[Object.keys(data)[i]].coords)[0], projection(data[Object.keys(data)[i]].coords)[1], 0);
+      }
+      d3.selectAll('circle')
+        .transition()
+        .duration(750)
+        .attr('fill','black')
+        .attr('r', 5);
+    } else if (this !== d3.select('button#none')[0][0]) {
+      displayHelp(this);
+
+      var test = this;
+      d3.selectAll('.cuisines')
+        .classed('selected', function() {return (this === test) ? true:false; });
+      var cuis = d3.select(this).attr('id');
+      resizeDots(cuis);
+    } else {
+      displayHelp(this);
+
+      var test = this;
+      d3.selectAll('.cuisines')
+        .classed('selected', function() {return (this === test) ? true:false; });
+      d3.selectAll('circle').remove();
+      for(var i=0; i<Object.keys(data).length; i++)
+      {
+        makeCircle(data[Object.keys(data)[i]].name, projection(data[Object.keys(data)[i]].coords)[0], projection(data[Object.keys(data)[i]].coords)[1], 0);
+      }
+      d3.selectAll('circle')
+        .transition()
+        .duration(750)
+        .attr('fill','black')
+        .attr('r', 5);
+    }
+  }
+
+  function displayHelp(a) {
+
+    if (a.nodeName === 'BUTTON') {
+      if (a.id === 'none') {
+        d3.selectAll('.help').remove();
+        help.append('text')
+          .attr('class', 'help')
+          .attr('id', 'head')
+          .attr('x', 76)
+          .attr('y', 35)
+          .attr('fill', 'black')
+          .text('Cuisine Cornucopia')
+          .style('font-size', '22px')
+          .style('opacity', 1)
+          .style('position', 'absolute');
+        help.append('text')
+          .attr('class', 'help')
+          .attr('id', 'text')
+          .attr('x', 76)
+          .attr('y', 55)
+          .attr('fill', 'black')
+          .text('Click on a circle to see how popular ethnic cuisines fare in major U.S. cities.')
+          .style('font-size', '16px')
+          .style('opacity', 1)
+          .style('position', 'absolute');
+      } else {
+        d3.selectAll('.help').remove();
+        help.append('text')
+          .attr('class', 'help')
+          .attr('id', 'head')
+          .attr('x', 76)
+          .attr('y', 35)
+          .attr('fill', 'black')
+          .text(a.innerHTML + ' Cuisine')
+          .style('font-size', '22px')
+          .style('opacity', 1)
+          .style('position', 'absolute');
+        help.append('text')
+          .attr('class', 'help')
+          .attr('id', 'text')
+          .attr('x', 76)
+          .attr('y', 55)
+          .attr('fill', 'black')
+          .text('Click on a city to see how diner orders from ' + a.innerHTML + ' restaurants compare to restaurant offerings.')
+          .style('font-size', '16px')
+          .style('opacity', 1)
+          .style('position', 'absolute');
+      }
+    } else if (a.nodeName === 'circle') {
+      if (d3.select('.selected')[0][0].id === 'none') {
+        d3.selectAll('.help').remove();
+        help.append('text')
+          .attr('class', 'help')
+          .attr('id', 'head')
+          .attr('x', 76)
+          .attr('y', 35)
+          .attr('fill', 'black')
+          .text('Cuisine Cornucopia')
+          .style('font-size', '22px')
+          .style('opacity', 1)
+          .style('position', 'absolute');
+      } else {
+        d3.selectAll('.help').remove();
+        help.append('text')
+          .attr('class', 'help')
+          .attr('id', 'head')
+          .attr('x', 76)
+          .attr('y', 35)
+          .attr('fill', 'black')
+          .text(d3.select('.selected')[0][0].innerHTML + ' Cuisine')
+          .style('font-size', '22px')
+          .style('opacity', 1)
+          .style('position', 'absolute');
+      }
+    } else {
+      if (d3.select('.selected')[0][0].id === 'none') {
+        d3.selectAll('.help').remove();
+        help.append('text')
+          .attr('class', 'help')
+          .attr('id', 'head')
+          .attr('x', 76)
+          .attr('y', 35)
+          .attr('fill', 'black')
+          .text('Cuisine Cornucopia')
+          .style('font-size', '22px')
+          .style('opacity', 1)
+          .style('position', 'absolute');
+        help.append('text')
+          .attr('class', 'help')
+          .attr('id', 'text')
+          .attr('x', 76)
+          .attr('y', 55)
+          .attr('fill', 'black')
+          .text('Click on a circle to see how popular ethnic cuisines fare in major U.S. cities.')
+          .style('font-size', '16px')
+          .style('opacity', 1)
+          .style('position', 'absolute');
+      } else {
+        d3.selectAll('.help').remove();
+        help.append('text')
+          .attr('class', 'help')
+          .attr('id', 'head')
+          .attr('x', 76)
+          .attr('y', 35)
+          .attr('fill', 'black')
+          .text(d3.select('.selected')[0][0].innerHTML + ' Cuisine')
+          .style('font-size', '22px')
+          .style('opacity', 1)
+          .style('position', 'absolute');
+        help.append('text')
+          .attr('class', 'help')
+          .attr('id', 'text')
+          .attr('x', 76)
+          .attr('y', 55)
+          .attr('fill', 'black')
+          .text('Click on a city to see how diner orders from ' + d3.select('.selected')[0][0].innerHTML + ' restaurants compare to restaurant offerings.')
+          .style('font-size', '16px')
+          .style('opacity', 1)
+          .style('position', 'absolute');
+      }
+    }
+  }
+
+  function resizeDots(cuis) {
+    d3.selectAll('circle').remove();
+
+    var sortable = [];
+    for (var key in data) sortable.push([data[key].name, data[key].coords, data[key].orders[cuis], data[key].restos[cuis], Math.max(data[key].orders[cuis],data[key].restos[cuis])]);
+    sortable.sort(function(a,b) { return b[3] - a[3] } );
+
+    for(var i=0; i<10; i++)
+    {
+      var name = sortable[i][0];
+      var coords = sortable[i][1];
+      var orders = sortable[i][2];
+      var restos = sortable[i][3];
+
+      if (orders < restos) {
+        var b = makeCircle(name, projection(coords)[0], projection(coords)[1], 0);
+        b.transition()
+          .duration(750)
+          .attr('r', (restos == 0) ? 0:(4*Math.sqrt(restos)))
+          .attr('fill', '#faa633');
+        var a = makeCircle(name, projection(coords)[0], projection(coords)[1], 0);
+        a.transition()
+          .duration(750)
+          .attr('r', (orders == 0) ? 0:(4*Math.sqrt(orders)))
+          .attr('fill', '#c4122f');
+      } else {
+        var a = makeCircle(name, projection(coords)[0], projection(coords)[1], 0);
+        a.transition()
+          .duration(750)
+          .attr('r', (orders == 0) ? 0:(4*Math.sqrt(orders)))
+          .attr('fill', '#c4122f');
+        var b = makeCircle(name, projection(coords)[0], projection(coords)[1], 0);
+        b.transition()
+          .duration(750)
+          .attr('r', (restos == 0) ? 0:(4*Math.sqrt(restos)))
+          .attr('fill', '#faa633');
+      }
+    }
+  }
+
+</script>
+</body>

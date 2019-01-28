@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+{% block title %}{{ article.title }} | {{ SITENAME }}{% endblock %}
+{% block metadesc %}{{ article.description|e }}{% endblock %}
+
+{% block header %}
+<!-- Extra Header for IPython Notebooks
+================================================== -->
+  {% if EXTRA_HEADER %}
+    {{ EXTRA_HEADER }}
+  {% endif %}
+{% endblock %}
+
+{% block facebookcards %}
+{% if article is defined %}
+  <meta name="og:title" content="{{ article.title }}">
+  <meta name="og:type" content="website">
+  <meta name="og:url" content="{{ article.url }}">
+  <meta name="og:image" content="{{ article.image }}">
+{% else %}
+  <meta property="og:title" content="{{ SITENAME }}">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="{{ SITEURL }}">
+  <meta property="og:image" content="{{ AVATAR }}">
+{% endif %}
+{% endblock %}
+
+{% block twittercards %}
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@{{ TWITTER_NAME }}">
+  <meta name="twitter:creator" content="@{{ TWITTER_NAME }}">
+  <meta name="twitter:domain" content="{{ DOMAIN }}">
+  <meta name="twitter:image" content="{{ SITEURL }}{{ AVATAR }}">
+  <meta name="twitter:title" content="{{ article.title }}">
+  <meta name="twitter:description" content="{{ article.description|e }}">
+{% endblock %}
+
+{% block content %}
+
+  <h3 class="article-title"><a href="/{{ article.url }}" title="Permalink to {{ article.title }}">{{article.title}}</a></h3>
+  <h6 class="article-date">{{ article.locale_date }}</h6>
+  <div class="article-content">
+    {{ article.content }}
+  </div>
+    {{ ARTICLE_FOOTER }}
+
+    <a href="https://twitter.com/{{ TWITTER_NAME }}" class="twitter-follow-button" data-show-count="false">Follow @{{ TWITTER_NAME }}</a>
+    <a href="https://twitter.com/share" class="twitter-share-button" data-via="{{ TWITTER_NAME }}">Tweet</a>
+    <div class="back-to-home"><a href="/">← Back to Home</a></div>
+    <hr class="large">
+
+<!-- twitter.js -->
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+{% endblock %}
