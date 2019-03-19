@@ -14,5 +14,17 @@
     {
         "slug": "august",
         "url": "static/pdf/august__lvl-1.pdf"
+    },
+    {
+        "slug": "sagearray",
+        "url": "static/pdf/sage_array.pdf"
+    },
+    {
+        "slug": "consulting",
+        "url": "static/pdf/sage_array.pdf"
+    },
+    {
+        "slug": "kingdom",
+        "url": "static/pdf/establishing_the_kingdom.pdf"
     }
 ]

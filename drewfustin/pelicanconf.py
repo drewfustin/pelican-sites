@@ -14,6 +14,9 @@ SITEURL = 'http://0.0.0.0:8000'
 GITHUB_SITE_REPO = 'https://github.com/drewfustin/drewfustin.github.io'
 PELICAN_VERSION = pelican.__version__
 
+# Accounts
+GOOGLE_ANALYTICS = 'UA-59064911-1'
+
 # Style
 THEME = 'themes/automaton'
 BANNER_COLOR = '#000'
